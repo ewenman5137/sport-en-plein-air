@@ -1,0 +1,26 @@
+#navBar{
+    position: fixed;
+    height: 10vh;
+    width: 100%;
+    background-color: orange;
+}
+#containeurNavBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(156, 156, 156);
+    height: 100%;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+#containeurLiensNavBar{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    margin-right: 10%;
+}
+#containeurLiensNavBar a{
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,84 @@
+#footer {
+    background-color: #83965E;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+#politiqueMentions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#politiqueMentions a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#politiqueMentions a:hover {
+    opacity: 0.7;
+}
+
+.barDeSeparation {
+    width: 100%;
+    max-width: 1200px;
+    margin: 15px auto;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#reseaux {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#reseaux p {
+    font-size: 14px;
+}
+
+.containeurReseaux {
+    display: flex;
+    gap: 15px;
+}
+
+.reseau {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.reseau:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.reseau img {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+}
+
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    #reseaux {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #footer {
+        padding: 20px;
+    }
+}
