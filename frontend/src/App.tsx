@@ -1,5 +1,11 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import Home from './pages/Home';
+import NotreEquipe from './pages/NotreEquipe';
+import Activites from './pages/Activites';
+import Article from './pages/Article';
+import AdminActivites from './pages/AdminActivites';
+import AdminEquipe from './pages/AdminEquipe';
+import AdminPartenaire from './pages/AdminPartenaire';
 
 
 function App() {
@@ -8,6 +14,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/notre-equipe" element={<NotreEquipe/>} />
+        <Route path="/nos-activites" element={<Activites/>} />
+        <Route path="/activites/:id" element={<Article/>} />
+        <Route path="/admin-activites" element={<AdminActivites/>} />
+        <Route path="/admin-equipe" element={<AdminEquipe/>} />
+        <Route path="/admin-partenaire" element={<AdminPartenaire/>} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,0 +1,36 @@
+#pagePartenaires{
+    display: flex;
+    height: 100%;
+}
+#containerPartenaires{
+    display: flex;
+    flex-direction: column;
+}
+#partenaires{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    flex-wrap: wrap;
+}
+.partenaire{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: orange;
+    margin-left: 1%;
+    border-radius: 20px;
+}
+.partenaire img{
+    width: 80%;
+}
+.delete-btn{
+    width: 10%;
+    aspect-ratio: 1/1;
+    margin-bottom: -5%;
+    z-index: 1000;
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+    border: none;
+    font-weight: bold;
+}

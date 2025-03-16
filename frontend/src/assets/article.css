@@ -1,0 +1,96 @@
+/* Répare le problème de chevauchement du header */
+#pageArticle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    width: 100%;
+}
+
+/* Ajoute un espace en haut pour éviter que le contenu ne soit caché par la navbar */
+#article {
+    max-width: 900px;
+    margin: 100px auto 50px; /* Ajout d'une marge en haut pour compenser la NavBar */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Retour */
+#article button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#article button:hover {
+    color: #007bff;
+}
+
+/* Titre de l'activité */
+#nomActivite {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Image de l'activité */
+#article img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Description */
+#description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Plan */
+#plan {
+    font-size: 1.1em;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Date */
+#date {
+    font-size: 1em;
+    color: #888;
+    font-style: italic;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    #article {
+        margin-top: 120px; /* Ajuste la marge pour compenser la NavBar sur mobile */
+        padding: 15px;
+    }
+
+    #nomActivite {
+        font-size: 2em;
+    }
+
+    #description {
+        font-size: 1.1em;
+    }
+
+    #plan {
+        font-size: 1em;
+    }
+}

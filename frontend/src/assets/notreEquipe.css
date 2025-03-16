@@ -1,0 +1,115 @@
+/* Styles globaux */
+#pageNotreEquipe {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+#NotreEquipe {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Titre */
+#NotreEquipe h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#NotreEquipe p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Conteneur de l'équipe */
+#containeurEquipe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Carte membre */
+.equipe {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.equipe:hover {
+    transform: translateY(-5px);
+}
+
+/* Image du membre */
+.equipe img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Nom */
+.nom {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* Fonction */
+.fonction {
+    font-size: 1.1em;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.description {
+    font-size: 1em;
+    color: #555;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+/* Réseaux sociaux */
+.containeurReseaux {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reseau {
+    width: 40px;
+    height: 40px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.reseau:hover {
+    background: #555;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #containeurEquipe {
+        grid-template-columns: 1fr;
+    }
+}

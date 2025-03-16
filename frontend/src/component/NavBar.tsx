@@ -7,12 +7,12 @@ function NavBar() {
         <>
         <div id="navBar">
             <div id="containeurNavBar">
-                <a href="/"><img src="/logo.png" alt="Logo" /></a>
+                <a href="/"><img id="logo" src="/logo.png" alt="Logo" /></a>
                 <div id="containeurLiensNavBar">
-                    <a href="#notreEquipe">Notre équipe</a>
-                    <a href="#nosValeurs">Nos valeurs</a>
-                    <a href="#nosPartenaire">Nos partenaire</a>
-                    <a href="#nousContacter">Nous contacter</a>
+                    <a href="/notre-equipe">Notre équipe</a>
+                    <a href="/#nosValeurs">Nos valeurs</a>
+                    <a href="/#nosPartenaire">Nos partenaire</a>
+                    <a href="/#nousContacter">Nous contacter</a>
                 </div>
             </div>
         </div>

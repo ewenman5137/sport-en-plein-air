@@ -1,0 +1,16 @@
+#pageAdminActivites{
+    display: flex;
+    height: 100%;
+}
+#containeurAdminActivites{
+    margin-top: 5vh;
+    width: 100%;
+}
+#admin-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#containeurActivites{
+    margin-top: 5vh;
+}

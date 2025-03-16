@@ -80,7 +80,7 @@ function Home() {
                         <p>Viens profiter d’une journée inoubliable sur les pistes du Mont Valin ! Entre descentes enneigées, panoramas à couper le souffle et ambiance conviviale, cette sortie est l’occasion parfaite de glisser, s’amuser et se dépasser.</p>
                         <div id="footerActivite">
                             <p className="dateActivite">May 20th 2020</p>
-                            <a href="">En savoir +</a>
+                            <a href="/activites/1">En savoir +</a>
                         </div>
                     </div>
                     <div className="activite">
@@ -102,7 +102,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <a href="">Voir toutes nos activités</a>
+                <a href="/nos-activites">Voir toutes nos activités</a>
             </div>
             <div id="quiSommesNous">
                 <div id="infoQuiSommesNous">
