@@ -11,6 +11,7 @@
 #NotreEquipe {
     text-align: center;
     padding: 50px 20px;
+    padding-top: 10vh;
 }
 
 /* Titre */
@@ -42,7 +43,7 @@
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: center;
+    justify-content: justify;
     transition: transform 0.2s ease-in-out;
 }
 

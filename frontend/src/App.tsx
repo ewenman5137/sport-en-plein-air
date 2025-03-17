@@ -6,6 +6,7 @@ import Article from './pages/Article';
 import AdminActivites from './pages/AdminActivites';
 import AdminEquipe from './pages/AdminEquipe';
 import AdminPartenaire from './pages/AdminPartenaire';
+import Login from './pages/Login';
 
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
         <Route path="/notre-equipe" element={<NotreEquipe/>} />
         <Route path="/nos-activites" element={<Activites/>} />
         <Route path="/activites/:id" element={<Article/>} />
-        <Route path="/admin-activites" element={<AdminActivites/>} />
+        <Route path="/admin" element={<AdminActivites/>} />
         <Route path="/admin-equipe" element={<AdminEquipe/>} />
         <Route path="/admin-partenaire" element={<AdminPartenaire/>} />
+        <Route path="/login" element={<Login/>} />
       </Routes>
     </BrowserRouter>
   )

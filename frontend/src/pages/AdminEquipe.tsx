@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../assets/adminMembre.css";
 import Panel from "../component/Panel";
+import { useNavigate } from "react-router-dom";
 
 interface Member {
     id: number;
@@ -25,6 +26,15 @@ function AdminEquipe() {
                 setMembers(data);
             })
             .catch((error) => console.error(error));
+    }, []);
+    
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        const token = sessionStorage.getItem("authToken");
+        if (!token) {
+            navigate("/login");
+        }
     }, []);
 
     return (

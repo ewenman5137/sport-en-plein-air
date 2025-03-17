@@ -1,4 +1,5 @@
 import "../assets/home.css"
+import "../assets/card.css"
 import NavBar from "../component/NavBar";
 import Footer from "../component/Footer";
 
@@ -10,14 +11,21 @@ function Home() {
             <NavBar/>
             <div id="header">
                 <div id="containeurImage">
-                    <img src="/home.png" alt="" />
+                    <img id="image1" src="/imageAccueil/1.png" alt="" />
+                    <img id="image2" src="/imageAccueil/2.png" alt="" />
+                    <img id="image3" src="/imageAccueil/3.png" alt="" />
+                    <img id="image4" src="/imageAccueil/4.png" alt="" />
+                    <img id="image5" src="/imageAccueil/5.png" alt="" />
+                    <img id="image6" src="/imageAccueil/6.png" alt="" />
+                    <img id="image7" src="/imageAccueil/7.png" alt="" />
+                    <img id="image8" src="/imageAccueil/8.png" alt="" />
                 </div>
                 <div id="infoHeader">
                     <h1>UQAC en Plein Air</h1>
                     <p>Welcome to the National Hookah Community Association "NHCA". We are a diverse alliance of businesses from all ends of the Hookah experience, from manufacturers and importers of molasses, pipes and accessories to distributors, Hookah lounges and Hookah/shisha retail stores.</p>
                     <div id="containeurBtnImageHeader">
                         <a className="btn" href="#nosActivites">Nos activités</a>
-                        <a href="">Notre instagram</a>
+                        <a href="https://www.instagram.com/sport.plein.air.uqac/">Notre instagram</a>
                         <img src="/montagne.png" alt="" />
                     </div>
                     <div className="barSeparation"></div>
@@ -32,7 +40,7 @@ function Home() {
                         Passionnés de plein air, nous voulons rendre l’aventure accessible à tous, à travers la randonnée, le ski, le camping et bien plus encore. Ici, chacun peut se dépasser, explorer et partager des moments uniques dans une nature grandiose.<br /><br />
                         Rejoins-nous pour vivre des expériences inoubliables et repousser tes limites ! 🌲🏕⛷🚴‍♂️
                     </p>
-                    <a className="btn" href="">En savoir +</a>
+                    <a className="btn" href="/notre-equipe">En savoir +</a>
                 </div>
                 <img src="/bureau.png" alt="" />
             </div>
@@ -78,7 +86,7 @@ function Home() {
                         <img src="/activite1.png" alt="" />
                         <h2 className="titreActivite">Ski au mont-valin</h2>
                         <p>Viens profiter d’une journée inoubliable sur les pistes du Mont Valin ! Entre descentes enneigées, panoramas à couper le souffle et ambiance conviviale, cette sortie est l’occasion parfaite de glisser, s’amuser et se dépasser.</p>
-                        <div id="footerActivite">
+                        <div className="footerActivite">
                             <p className="dateActivite">May 20th 2020</p>
                             <a href="/activites/1">En savoir +</a>
                         </div>
@@ -87,7 +95,7 @@ function Home() {
                         <img src="/activite2.png" alt="" />
                         <h2 className="titreActivite">Escalade de glace</h2>
                         <p>Viens repousser tes limites et découvrir les sensations uniques de l’escalade de glace sur les parois gelées du Saguenay ! Encadré par des passionnés, tu apprendras à manier piolets et crampons pour grimper en toute sécurité.</p>
-                        <div id="footerActivite">
+                        <div className="footerActivite">
                             <p className="dateActivite">May 20th 2020</p>
                             <a href="">En savoir +</a>
                         </div>
@@ -96,7 +104,7 @@ function Home() {
                         <img src="/activite3.png" alt="" />
                         <h2 className="titreActivite">Ski au mont-francis</h2>
                         <p>La montagne Mont-Francis, beau et gentil au premier abord, peut vous proposer des pistes à la fois ludiques et techniques, parfaites pour y passer une journée après une semaine de cours.</p>
-                        <div id="footerActivite">
+                        <div className="footerActivite">
                             <p className="dateActivite">May 20th 2020</p>
                             <a href="">En savoir +</a>
                         </div>
@@ -135,10 +143,10 @@ function Home() {
                     <h1>Nous contacter</h1>
                     <p>N’hésite pas à nous contacter ! Que ce soit pour en savoir plus sur nos activités, proposer une collaboration ou rejoindre l’aventure, nous serons ravis de te répondre. Remplis le formulaire ci-dessous et nous reviendrons vers toi dès que possible.</p>
                     <p>Réseaux sociaux</p>
-                    <div className="containeurReseaux">
-                        <a href=""><img src="/reseaux/insta.png" alt="" /></a>
-                        <a href=""><img src="/reseaux/mail.png" alt="" /></a>
-                        <a href=""><img src="/reseaux/meta.png" alt="" /></a>
+                    <div className="containeurReseauxHome">
+                        <a href=""><img src="/reseaux/insta_black.png" alt="" /></a>
+                        <a href=""><img src="/reseaux/mail_black.png" alt="" /></a>
+                        <a href=""><img src="/reseaux/meta_black.png" alt="" /></a>
                     </div>
                 </div>
                 <div id="formNousContacter">

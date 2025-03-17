@@ -6,23 +6,71 @@
     padding: 40px 60px;
     background-color: #f6f6f6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20vh;
 }
 
 #containeurImage {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    width: 50%;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 40%;
+    margin: auto;
 }
 
 #containeurImage img {
-    width: 150px;
-    height: 150px;
     object-fit: cover;
-    border-radius: 0 50px 50px 50px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
+
+/* Styles spécifiques pour varier la forme des images */
+#image1 {
+    border-radius: 50% 0 0 0;
+    width: 80%;
+    height: 80%;
+}
+
+#image2 {
+    border-radius: 50px;
+    width: 50%;
+    height: 50%;
+}
+
+#image3 {
+    border-top-right-radius: 100%;
+    width: 80%;
+    height: 80%;
+}
+
+#image4 {
+    border-radius: 0 0 0 100px;
+    width: 60%;
+    height: 60%;
+    margin-left: 25%;
+}
+
+#image5 {
+    border-radius: 0 100% 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+#image6 {
+    border-radius: 0 0 100% 0;
+    width: 80%;
+    height: 80%;
+}
+
+#image7 {
+    border-radius: 0 0 0 100%;
+    width: 80%;
+    height: 80%;
+}
+
+#image8 {
+    border-radius: 0 0 50% 0;
+    width: 80%;
+    height: 80%;
+}
+
 
 #infoHeader {
     display: flex;
@@ -209,103 +257,6 @@
 }
 
 
-#nosActivites {
-    background-color: #f6f6f6;
-    padding: 60px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#nosActivites h1 {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-#nosActivites > p {
-    font-size: 15px;
-    color: #555;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#containeurValeurs,
-#containeurActivites {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.activite {
-    background-color: white;
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    width: 32%;
-    display: flex;
-    flex-direction: column;
-}
-
-.activite img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.titreActivite {
-    padding: 15px;
-    font-size: 20px;
-}
-
-.activite p {
-    font-size: 14px;
-    padding: 0 15px;
-    line-height: 1.4;
-    color: #555;
-}
-
-#footerActivite {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    margin-top: auto;
-}
-
-.dateActivite {
-    font-size: 13px;
-    color: #aaa;
-}
-
-#footerActivite a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-#footerActivite a:hover {
-    color: #9b7356;
-}
-
-#nosActivites > a {
-    display: inline-block;
-    color: black;
-    border-bottom: 2px solid #555;
-    margin-top: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s, border-color 0.3s;
-}
-
-#nosActivites > a:hover {
-    color: #9b7356;
-    border-color: #9b7356;
-}
-
 /* Section Qui Sommes Nous */
 #quiSommesNous {
     display: flex;
@@ -344,11 +295,13 @@
 
 
 #transition {
-    background-image: url('/transition.png');
+    background-image: url('/rejoindreEquipe.png');
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 120px 60px;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
     text-align: center;
     font-size: 35px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -405,13 +358,13 @@
     color: #333;
 }
 
-.containeurReseaux {
+.containeurReseauxHome {
     display: flex;
-    gap: 15px;
-    margin-top: 10px;
+    justify-content: space-between;
+    width: 30%;
 }
 
-.containeurReseaux a {
+.containeurReseauxHome a {
     width: 35px;
     height: 35px;
     background-color: rgba(0,0,0,0.1);
@@ -422,11 +375,11 @@
     transition: background-color 0.3s;
 }
 
-.containeurReseaux a:hover {
+.containeurReseauxHome a:hover {
     background-color: rgba(0,0,0,0.2);
 }
 
-.containeurReseaux img {
+.containeurReseauxHome img {
     width: 20px;
     height: 20px;
 }
@@ -455,8 +408,11 @@
 }
 
 .champ textarea {
-    resize: vertical;
+    resize: none;
     height: 120px;
+}
+.champ select{
+    width: 103%;
 }
 
 #formNousContacter button {
@@ -510,14 +466,6 @@
         text-align: center;
     }
 }
-
-
-
-
-
-
-
-
 /* Responsive */
 @media (max-width: 900px) {
     #notreEquipe, #headerNosValeurs {
@@ -539,33 +487,6 @@
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Responsive mobile */
 @media (max-width: 900px) {
     #header {

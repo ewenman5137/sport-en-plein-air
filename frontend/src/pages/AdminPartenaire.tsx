@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../assets/adminPartenaire.css";
 import Panel from "../component/Panel";
+import { useNavigate } from "react-router-dom";
 
 interface Partenaire {
     id: number;
@@ -25,6 +26,17 @@ function AdminPartenaire() {
             })
             .catch((error) => console.error(error));
     }, []);
+
+
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        const token = sessionStorage.getItem("authToken");
+        if (!token) {
+            navigate("/login");
+        }
+    }, []);
+
 
     return (
         <>

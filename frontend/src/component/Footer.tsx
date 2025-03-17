@@ -14,9 +14,9 @@ function Footer() {
             <div id="reseaux">
                 <p>© Design & developpe by Johanne VIGOUROUX, Ewen BUHOT</p>
                 <div className="containeurReseaux">
-                    <a href="" className="reseau"><img  src="/reseaux/insta.png" alt="" /></a>
-                    <a href="" className="reseau"><img  src="/reseaux/mail.png" alt="" /></a>
-                    <a href="" className="reseau"><img  src="/reseaux/meta.png" alt="" /></a>
+                    <a href="" className="reseau"><img  src="/reseaux/insta_white.png" alt="" /></a>
+                    <a href="" className="reseau"><img  src="/reseaux/mail_white.png" alt="" /></a>
+                    <a href="" className="reseau"><img  src="/reseaux/meta_white.png" alt="" /></a>
                 </div>
             </div>
         </div>

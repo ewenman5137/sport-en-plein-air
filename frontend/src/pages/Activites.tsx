@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../assets/activites.css";
+import "../assets/card.css"
 import NavBar from "../component/NavBar";
 import Footer from "../component/Footer";
 
@@ -33,9 +34,9 @@ function Activites() {
                             activities.map((activity) => (
                                 <div key={activity.id} className="activite">
                                     <img src={activity.image_path} alt={activity.title} />
-                                    <h2>{activity.title}</h2>
+                                    <h2 className="titreActivite">{activity.title}</h2>
                                     <p>{activity.description}</p>
-                                    <div className="containeurDate"><p><strong>Date:</strong> {new Date(activity.date).toLocaleDateString()}</p><a href={`/activites/${activity.id}`}>En savoir +</a></div>
+                                    <div className="footerActivite"><p className="dateActivite"><strong>Date:</strong> {new Date(activity.date).toLocaleDateString()}</p><a href={`/activites/${activity.id}`}>En savoir +</a></div>
                                 </div>
                             ))
                         ) : (

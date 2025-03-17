@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../assets/adminActivites.css";
 import Panel from "../component/Panel";
 
@@ -25,7 +26,15 @@ function AdminActivites() {
             .then(() => setActivities(activities.filter(activity => activity.id !== id)))
             .catch(error => console.error("Erreur lors de la suppression de l'activité:", error));
     };
-
+    
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        const token = sessionStorage.getItem("authToken");
+        if (!token) {
+            navigate("/login");
+        }
+    }, []);
     return (
         <>
             <div id="pageAdminActivites">
