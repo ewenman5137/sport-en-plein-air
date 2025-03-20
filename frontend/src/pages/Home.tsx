@@ -2,9 +2,26 @@ import "../assets/home.css"
 import "../assets/card.css"
 import NavBar from "../component/NavBar";
 import Footer from "../component/Footer";
+import { useEffect } from "react";
 
   
 function Home() {    
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, { threshold: 0.2 });
+
+        const elements = document.querySelectorAll(".animated");
+        elements.forEach((el) => observer.observe(el));
+
+        return () => {
+            elements.forEach((el) => observer.unobserve(el));
+        };
+    }, []);
     return (
         <>
         <div>
@@ -22,17 +39,17 @@ function Home() {
                 </div>
                 <div id="infoHeader">
                     <h1>UQAC en Plein Air</h1>
-                    <p>Welcome to the National Hookah Community Association "NHCA". We are a diverse alliance of businesses from all ends of the Hookah experience, from manufacturers and importers of molasses, pipes and accessories to distributors, Hookah lounges and Hookah/shisha retail stores.</p>
+                    <p>Notre association a pour mission de faire découvrir le Saguenay, en mettant à l’honneur le Mont Valin, la Station Édouard et les nombreuses activités sportives à Chicoutimi.</p>
                     <div id="containeurBtnImageHeader">
                         <a className="btn" href="#nosActivites">Nos activités</a>
-                        <a href="https://www.instagram.com/sport.plein.air.uqac/">Notre instagram</a>
+                        <a target="_blank" href="https://www.instagram.com/sport.plein.air.uqac/">Notre Instagram</a>
                         <img src="/montagne.png" alt="" />
                     </div>
                     <div className="barSeparation"></div>
                     <a href="#contact">Avez-vous des questions ?<br />Contactez-nous !</a>
                 </div>
             </div>
-            <div id="notreEquipe">
+            <div id="notreEquipe" className="animated">
                 <div id="containeurInfoNotreEquipe">
                     <p>Qui sommes nous ?</p>
                     <h1>Notre équipe</h1>
@@ -44,13 +61,12 @@ function Home() {
                 </div>
                 <img src="/bureau.png" alt="" />
             </div>
-            <div id="nosValeurs">
+            <div id="nosValeurs" className="animated">
                 <div id="headerNosValeurs">
                     <div>
                         <h1>Nos valeurs</h1>
                         <p>Notre association fonctionne sans but lucratif : chaque dollar récolté est entièrement réinvesti dans le projet pour offrir aux étudiants <br /> des expériences. Créée par des étudiants, pour des étudiants, elle a pour objectif de rendre l’aventure accessible à tous.</p>
                     </div>
-                    <img src="/ski.png" alt="" />
                 </div>
                 <div id="containeurValeurs">
                     <div className="valeur">
@@ -80,7 +96,7 @@ function Home() {
             </div>
             <div id="nosActivites">
                 <h1>Nos activités</h1>
-                <p>Notre association te propose une multitude d’activités en plein air pour découvrir le Saguenay autrement, repousser tes limites et partager des moments inoubliables avec une <br /> communauté passionnée. Que tu sois amateur de randonnée, de ski, de camping ou simplement curieux d’explorer, il y a toujours une nouvelle aventure qui t’attend !</p>
+                <p>Notre association te propose une multitude d’activités en plein air pour découvrir le Saguenay autrement, repousser tes limites et partager des moments inoubliables avec une  communauté passionnée.</p>
                 <div id="containeurActivites">
                     <div className="activite">
                         <img src="/activite1.png" alt="" />
@@ -112,9 +128,9 @@ function Home() {
                 </div>
                 <a href="/nos-activites">Voir toutes nos activités</a>
             </div>
-            <div id="quiSommesNous">
+            <div id="quiSommesNous" className="animated">
                 <div id="infoQuiSommesNous">
-                    <p>Qui sommes-nous ?</p>
+                    <p>QUI SOMMES-NOUS ?</p>
                     <h1>Tout comprendre sur l'asso</h1>
                     <p>Notre association, créée par des étudiants et pour des étudiants, a pour mission de faire découvrir le Saguenay, de promouvoir les activités en plein air et de rassembler une communauté autour de l’aventure et du dépassement de soi. À travers des sorties, des événements et des initiations sportives, nous mettons tout en œuvre pour rendre la nature et le sport accessibles à tous, sans but lucratif.<br /><br />
                         Mais plutôt que de longs discours, nous vous invitons à découvrir notre univers à travers cette vidéo 🎥. <br /><br />
@@ -127,7 +143,7 @@ function Home() {
             <div id="transition">
                 <h1>Pourquoi ne pas nous rejoindre ?</h1>
             </div>
-            <div id="nosPartenaires">
+            <div id="nosPartenaires" className="animated">
                 <h1>Ils nous font confiance</h1>
                 <div id="containeurEntreprise">
                     <img src="/entreprise/decathlon.png" alt="" />
@@ -138,15 +154,15 @@ function Home() {
                     <img src="/entreprise/uqac.png" alt="" />
                 </div>
             </div>
-            <div id="nousContacter">
+            <div id="nousContacter" className="animated">
                 <div id="infoNousContacter">
                     <h1>Nous contacter</h1>
                     <p>N’hésite pas à nous contacter ! Que ce soit pour en savoir plus sur nos activités, proposer une collaboration ou rejoindre l’aventure, nous serons ravis de te répondre. Remplis le formulaire ci-dessous et nous reviendrons vers toi dès que possible.</p>
-                    <p>Réseaux sociaux</p>
+                    <p id="titre-containeur-reseaux-home">Réseaux sociaux</p>
                     <div className="containeurReseauxHome">
-                        <a href=""><img src="/reseaux/insta_black.png" alt="" /></a>
-                        <a href=""><img src="/reseaux/mail_black.png" alt="" /></a>
-                        <a href=""><img src="/reseaux/meta_black.png" alt="" /></a>
+                        <a href="" target="_blank"><img src="/reseaux/insta_black.png" alt="" /></a>
+                        <a href="" target="_blank"><img id="facebook_black" src="/reseaux/facebook.svg" alt="" /></a>
+                        <a href="" target="_blank"><img src="/reseaux/mail_black.png" alt="" /></a>
                     </div>
                 </div>
                 <div id="formNousContacter">
@@ -161,14 +177,19 @@ function Home() {
                     <div className="champ">
                         <p>Objet</p>
                         <select name="" id="">
-                            <option value="test">test2</option>
+                            <option value="test">J'aimerais travailler avec vous.</option>
+                            <option value="test">Demande de partenariat pour des activités de plein air</option>
+                            <option value="test">Candidature spontanée pour un poste dans les sports de plein air</option>
+                            <option value="test">Proposition de collaboration pour des événements outdoor</option>
+                            <option value="test">Demande d’informations sur vos services et équipements sportifs</option>
+                            <option value="test">Proposition de test et de promotion de vos produits outdoor</option>
                         </select>
                     </div>
                     <div className="champ">
                         <p>Message</p>
                         <textarea name="" id="" placeholder="ex : Je vous contact pour ..."></textarea>
                     </div>
-                    <button>envoyer</button>
+                    <button>Envoyer</button>
                 </div>
             </div>
             <Footer/>

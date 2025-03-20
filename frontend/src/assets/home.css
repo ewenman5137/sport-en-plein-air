@@ -1,10 +1,23 @@
+/* Police pour les titres */
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+}
+
+/* Police pour le reste du texte */
+body, p, a, span, li, div {
+    font-family: 'Glacial Indifference', sans-serif;
+}
+
+
+body{
+    text-align: justify;
+}
 #header {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 80px;
     padding: 40px 60px;
-    background-color: #f6f6f6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding-top: 20vh;
 }
@@ -94,7 +107,6 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 25px;
 }
 
 #containeurBtnImageHeader .btn {
@@ -149,12 +161,16 @@
 }
 
 #notreEquipe {
+    width: 70%;
+    margin-left: 15%;
     background-color: #f6f6f6;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 60px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 2;
 }
 
 #containeurInfoNotreEquipe {
@@ -200,15 +216,17 @@
 }
 
 #nosValeurs {
+    margin-top: -35vh;
     background-color: #82965E;
     padding: 60px;
+    padding-top: 20%;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #headerNosValeurs {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: 1px solid rgba(255,255,255,0.5);
     padding-bottom: 30px;
@@ -218,6 +236,7 @@
 #headerNosValeurs h1 {
     font-size: 35px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 #headerNosValeurs p {
@@ -237,11 +256,15 @@
 }
 
 .valeur {
-    width: 32%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
 }
 
 .chiffre {
-    font-size: 50px;
+    margin: 0;
+    margin-right: 20px;
+    font-size: 80px;
     opacity: 0.2;
     margin-bottom: 10px;
 }
@@ -357,16 +380,18 @@
     margin-bottom: 20px;
     color: #333;
 }
-
+#titre-containeur-reseaux-home{
+    margin-top: 10vh;
+}
 .containeurReseauxHome {
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 35%;
 }
 
 .containeurReseauxHome a {
-    width: 35px;
-    height: 35px;
+    width: 65px;
+    height: 65px;
     background-color: rgba(0,0,0,0.1);
     border-radius: 50%;
     display: flex;
@@ -380,8 +405,9 @@
 }
 
 .containeurReseauxHome img {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 #formNousContacter {
@@ -424,6 +450,12 @@
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
+    width: 47vw;
+}
+
+#facebook_black{
+    width: 50px;
+    height: 50px;
 }
 
 #formNousContacter button:hover {
@@ -503,3 +535,30 @@
         height: 100px;
     }
 }
+
+
+/* Animation fade-in + translation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initialisation : blocs cachés */
+.animated {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Ajout de la classe visible lors du scroll */
+.animated.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

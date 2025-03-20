@@ -5,3 +5,25 @@ body{
 #root{
     height: 100%;
 }
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('fonts/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+/* Police pour les titres */
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 500;
+}
+
+/* Police pour le reste du texte */
+body, p, a, span, li, div {
+    font-family: 'Glacial Indifference', sans-serif;
+}
