@@ -177,7 +177,7 @@ function Home() {
                     <div className="champ">
                         <p>Objet</p>
                         <select name="" id="">
-                            <option value="test">J'aimerais travailler avec vous.</option>
+                            <option value="test">Veuillez sélectionner un objet.</option>
                             <option value="test">Demande de partenariat pour des activités de plein air</option>
                             <option value="test">Candidature spontanée pour un poste dans les sports de plein air</option>
                             <option value="test">Proposition de collaboration pour des événements outdoor</option>
