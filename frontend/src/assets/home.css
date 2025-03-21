@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 /* Police pour les titres */
 h1, h2, h3 {
     font-family: 'Anton', sans-serif;
@@ -323,13 +328,13 @@ body{
     background-position: center;
     color: white;
     height: 25vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
     font-size: 35px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #nosPartenaires {
@@ -462,80 +467,6 @@ body{
     background-color: #835f46;
 }
 
-/* Responsive mobile */
-@media (max-width: 900px) {
-    #nousContacter {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    #infoNousContacter,
-    #formNousContacter {
-        width: 100%;
-    }
-
-    #transition {
-        font-size: 25px;
-        padding: 60px 20px;
-    }
-}
-
-
-
-
-
-/* Responsive pour mobile */
-@media (max-width: 900px) {
-    #containeurActivites, #quiSommesNous {
-        flex-direction: column;
-    }
-
-    .activite, #quiSommesNous img, #infoQuiSommesNous {
-        width: 100%;
-    }
-
-    #quiSommesNous {
-        text-align: center;
-    }
-}
-/* Responsive */
-@media (max-width: 900px) {
-    #notreEquipe, #headerNosValeurs {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #containeurInfoNotreEquipe, #notreEquipe img {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #containeurValeurs {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .valeur {
-        width: 100%;
-    }
-}
-/* Responsive mobile */
-@media (max-width: 900px) {
-    #header {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    #containeurImage, #infoHeader {
-        width: 100%;
-    }
-
-    #containeurImage img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
 
 /* Animation fade-in + translation */
 @keyframes fadeInUp {
@@ -562,3 +493,140 @@ body{
     transform: translateY(0);
 }
 
+
+/* Responsive mobile */
+@media (max-width: 900px) {
+    #nousContacter {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #infoNousContacter,
+    #formNousContacter {
+        width: 100%;
+    }
+
+    #transition {
+        font-size: 25px;
+        padding: 60px 20px;
+    }
+}
+
+
+
+
+
+/* Responsive pour mobile */
+@media (max-width: 900px) {
+    #header{
+        width: 100%;
+        padding: 0;
+        padding-top: 25%;
+    }
+    #header #containeurImage{
+        display: none;
+    }
+    #infoHeader{
+        width: 90vw;
+    }
+    #containeurBtnImageHeader{
+        font-size: 0.6rem;
+    }
+    #containeurBtnImageHeader a{
+        padding: 10px;
+    }
+    #containeurBtnImageHeader img{
+        width: 20%;
+    }
+    .barSeparation{
+        width: 75vw;
+    }
+
+    #notreEquipe{
+        margin: 0;
+        padding: 25px;
+        width: 80%;
+        margin-left: 2%;
+    }
+    #notreEquipe img{
+        display: none;
+    }
+    #containeurInfoNotreEquipe{
+        width: 100%;
+    }
+
+    #nosValeurs{
+        padding: 0;
+        padding-top: 40vh;
+    }
+    #headerNosValeurs{
+        width: 90%;
+        margin-left: 5%;
+    }
+    #containeurValeurs{
+        flex-direction: column;
+    }
+    .valeur{
+        width: 80%;
+        margin-left: 10%;
+    }
+    #containeurActivites{
+        flex-direction: column;
+    }
+    #quiSommesNous{
+        width: 90%;
+        padding: 0;
+        margin-left: 5%;
+        flex-direction: column;
+    }
+    #infoQuiSommesNous{
+        width: 100%;
+    }
+    #quiSommesNous img{
+        margin-bottom: 15vh;
+        width: 90%;
+    }
+    #transition h1{
+        font-size: 1.5rem;
+    }
+    #transition{
+        height: 1vh;
+    }
+    #nosPartenaires{
+        width: 90%;
+        margin-left: 5%;
+        padding: 0;
+        padding-bottom: 5%;
+    }
+    #nousContacter{
+        padding: 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+    #titre-containeur-reseaux-home{
+        margin-top: 2vh;
+    }
+    .containeurReseauxHome{
+        width: 70%;
+    }
+    #formNousContacter{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 5vh;
+    }
+    .champ input,select {
+        width: 90%;
+    }
+    .champ select {
+        width: 97%;
+    }
+    
+    .champ textarea {
+        width: 90%;
+    }
+
+    #formNousContacter button{
+        width: 97%;
+    }
+
+}

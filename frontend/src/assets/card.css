@@ -96,3 +96,32 @@
     color: #9b7356;
     border-color: #9b7356;
 }
+
+@media (max-width: 900px) {
+    #nousContacter {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #infoNousContacter,
+    #formNousContacter {
+        width: 100%;
+    }
+
+    #transition {
+        font-size: 25px;
+        padding: 60px 20px;
+    }
+}
+
+
+
+
+
+/* Responsive pour mobile */
+@media (max-width: 900px) {
+    .activite{
+        padding: 0;
+        width: 100%;
+    }
+}

@@ -24,7 +24,7 @@ function Home() {
     }, []);
     return (
         <>
-        <div>
+        <div id="containeur-home">
             <NavBar/>
             <div id="header">
                 <div id="containeurImage">
@@ -42,7 +42,7 @@ function Home() {
                     <p>Notre association a pour mission de faire découvrir le Saguenay, en mettant à l’honneur le Mont Valin, la Station Édouard et les nombreuses activités sportives à Chicoutimi.</p>
                     <div id="containeurBtnImageHeader">
                         <a className="btn" href="#nosActivites">Nos activités</a>
-                        <a target="_blank" href="https://www.instagram.com/sport.plein.air.uqac/">Notre Instagram</a>
+                        <a id="btn-insta" target="_blank" href="https://www.instagram.com/sport.plein.air.uqac/">Notre Instagram</a>
                         <img src="/montagne.png" alt="" />
                     </div>
                     <div className="barSeparation"></div>
