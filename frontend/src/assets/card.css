@@ -1,18 +1,19 @@
 
 
-#nosActivites {
+#nos-activites {
     background-color: #f6f6f6;
     padding: 60px;
-    text-align: center;
+    text-align: justify;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#nosActivites h1 {
+#nos-activites h1 {
     font-size: 40px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
-#nosActivites > p {
+#nos-activites > p {
     font-size: 15px;
     color: #555;
     margin-bottom: 40px;
@@ -21,8 +22,8 @@
     margin-right: auto;
 }
 
-#containeurValeurs,
-#containeurActivites {
+#containeur-valeurs,
+#containeur-activites {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -46,7 +47,7 @@
     object-fit: cover;
 }
 
-.titreActivite {
+.titre-activite {
     padding: 15px;
     font-size: 20px;
 }
@@ -58,7 +59,7 @@
     color: #555;
 }
 
-.footerActivite {
+.footer-activite {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,45 +67,46 @@
     margin-top: auto;
 }
 
-.dateActivite {
+.date-activite {
     font-size: 13px;
     color: #aaa;
 }
 
-.footerActivite a {
+.footer-activite a {
     color: black;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.footerActivite a:hover {
+.footer-activite a:hover {
     color: #9b7356;
 }
 
-#nosActivites > a {
+#nos-activites > a {
     display: inline-block;
     color: black;
-    border-bottom: 2px solid #555;
     margin-top: 30px;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.3s, border-color 0.3s;
+    text-align: center;
+    width: 100%;
 }
 
-#nosActivites > a:hover {
+#nos-activites > a:hover {
     color: #9b7356;
     border-color: #9b7356;
 }
 
 @media (max-width: 900px) {
-    #nousContacter {
+    #nous-contacter {
         flex-direction: column;
         gap: 30px;
     }
 
-    #infoNousContacter,
-    #formNousContacter {
+    #info-nous-contacter,
+    #form-nous-contacter {
         width: 100%;
     }
 

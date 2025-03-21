@@ -27,7 +27,7 @@ body{
     padding-top: 20vh;
 }
 
-#containeurImage {
+#containeur-image {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -35,7 +35,7 @@ body{
     margin: auto;
 }
 
-#containeurImage img {
+#containeur-image img {
     object-fit: cover;
 }
 
@@ -90,31 +90,31 @@ body{
 }
 
 
-#infoHeader {
+#info-header {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-#infoHeader h1 {
+#info-header h1 {
     font-size: 40px;
     margin-bottom: 20px;
 }
 
-#infoHeader p {
+#info-header p {
     font-size: 15px;
     margin-bottom: 25px;
     line-height: 1.5;
     color: #555;
 }
 
-#containeurBtnImageHeader {
+#containeur-btn-image-header {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-#containeurBtnImageHeader .btn {
+#containeur-btn-image-header .btn {
     background-color: #9b7356;
     color: white;
     padding: 10px 20px;
@@ -124,11 +124,11 @@ body{
     transition: background-color 0.3s;
 }
 
-#containeurBtnImageHeader .btn:hover {
+#containeur-btn-image-header .btn:hover {
     background-color: #846048;
 }
 
-#containeurBtnImageHeader a {
+#containeur-btn-image-header a {
     color: black;
     border: 2px solid #555;
     padding: 8px 18px;
@@ -137,35 +137,35 @@ body{
     transition: background-color 0.3s, color 0.3s;
 }
 
-#containeurBtnImageHeader a:hover {
+#containeur-btn-image-header a:hover {
     background-color: #555;
     color: white;
 }
 
-#containeurBtnImageHeader img {
+#containeur-btn-image-header img {
     width: 120px;
     opacity: 0.8;
 }
 
-.barSeparation {
+.bar-separation {
     width: 70%;
     height: 1px;
     background-color: rgba(0,0,0,0.2);
     margin-bottom: 25px;
 }
 
-#infoHeader > a {
+#info-header > a {
     color: #333;
     text-decoration: none;
     line-height: 1.5;
     transition: color 0.3s;
 }
 
-#infoHeader > a:hover {
+#info-header > a:hover {
     color: #000;
 }
 
-#notreEquipe {
+#notre-equipe {
     width: 70%;
     margin-left: 15%;
     background-color: #f6f6f6;
@@ -178,28 +178,29 @@ body{
     z-index: 2;
 }
 
-#containeurInfoNotreEquipe {
+#containeur-info-notre-equipe {
     width: 55%;
 }
 
-#containeurInfoNotreEquipe p:first-child {
+#containeur-info-notre-equipe p:first-child {
     font-size: 14px;
     color: #555;
     letter-spacing: 1px;
 }
 
-#containeurInfoNotreEquipe h1 {
+#containeur-info-notre-equipe h1 {
     font-size: 45px;
     margin: 10px 0 25px;
 }
 
-#containeurInfoNotreEquipe p {
+#containeur-info-notre-equipe p {
     font-size: 16px;
     color: #333;
     line-height: 1.6;
+    text-align: justify;
 }
 
-#containeurInfoNotreEquipe .btn {
+#containeur-info-notre-equipe .btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #9b7356;
@@ -210,17 +211,17 @@ body{
     transition: background-color 0.3s;
 }
 
-#containeurInfoNotreEquipe .btn:hover {
+#containeur-info-notre-equipe .btn:hover {
     background-color: #835f46;
 }
 
-#notreEquipe img {
+#notre-equipe img {
     width: 40%;
     border-radius: 5px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-#nosValeurs {
+#nos-valeurs {
     margin-top: -35vh;
     background-color: #82965E;
     padding: 60px;
@@ -229,7 +230,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#headerNosValeurs {
+#header-nos-valeurs {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,23 +239,23 @@ body{
     margin-bottom: 40px;
 }
 
-#headerNosValeurs h1 {
+#header-nos-valeurs h1 {
     font-size: 35px;
     margin-bottom: 10px;
     text-align: center;
 }
 
-#headerNosValeurs p {
+#header-nos-valeurs p {
     font-size: 14px;
     line-height: 1.5;
 }
 
-#headerNosValeurs img {
+#header-nos-valeurs img {
     width: 80px;
     opacity: 0.8;
 }
 
-#containeurValeurs {
+#containeur-valeurs {
     display: flex;
     gap: 30px;
     justify-content: space-between;
@@ -274,19 +275,30 @@ body{
     margin-bottom: 10px;
 }
 
-.contexteValeur h2 {
+.contexte-valeur h2 {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.contexteValeur p {
+.contexte-valeur p {
     font-size: 14px;
     line-height: 1.5;
 }
 
+#nos-activites-home{
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    height: 100vh;
+}
+#voir-nos-activites{
+    color: #000;
+    height: 10vh;
+}
+
 
 /* Section Qui Sommes Nous */
-#quiSommesNous {
+#qui-sommes-nous {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -295,27 +307,27 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#infoQuiSommesNous {
+#info-qui-sommes-nous {
     width: 55%;
 }
 
-#infoQuiSommesNous p:first-child {
+#info-qui-sommes-nous p:first-child {
     font-size: 14px;
     color: #555;
 }
 
-#infoQuiSommesNous h1 {
+#info-qui-sommes-nous h1 {
     font-size: 40px;
     margin: 15px 0;
 }
 
-#infoQuiSommesNous p {
+#info-qui-sommes-nous p {
     font-size: 15px;
     line-height: 1.6;
     color: #555;
 }
 
-#quiSommesNous img {
+#qui-sommes-nous img {
     width: 40%;
     border-radius: 4px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -337,19 +349,19 @@ body{
     justify-content: center;
 }
 
-#nosPartenaires {
+#nos-partenaires {
     background-color: #f6f6f6;
     padding: 60px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#nosPartenaires h1 {
+#nos-partenaires h1 {
     font-size: 30px;
     margin-bottom: 40px;
 }
 
-#containeurEntreprise {
+#containeur-entreprise {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -357,12 +369,12 @@ body{
     flex-wrap: wrap;
 }
 
-#containeurEntreprise img {
+#containeur-entreprise img {
     width: 120px;
     opacity: 0.8;
 }
 
-#nousContacter {
+#nous-contacter {
     padding: 60px;
     display: flex;
     justify-content: space-between;
@@ -371,16 +383,16 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#infoNousContacter {
+#info-nous-contacter {
     width: 45%;
 }
 
-#infoNousContacter h1 {
+#info-nous-contacter h1 {
     font-size: 35px;
     margin-bottom: 20px;
 }
 
-#infoNousContacter p {
+#info-nous-contacter p {
     font-size: 15px;
     margin-bottom: 20px;
     color: #333;
@@ -388,13 +400,13 @@ body{
 #titre-containeur-reseaux-home{
     margin-top: 10vh;
 }
-.containeurReseauxHome {
+.containeur-reseaux-home {
     display: flex;
     justify-content: space-between;
     width: 35%;
 }
 
-.containeurReseauxHome a {
+.containeur-reseaux-home a {
     width: 65px;
     height: 65px;
     background-color: rgba(0,0,0,0.1);
@@ -405,17 +417,17 @@ body{
     transition: background-color 0.3s;
 }
 
-.containeurReseauxHome a:hover {
+.containeur-reseaux-home a:hover {
     background-color: rgba(0,0,0,0.2);
 }
 
-.containeurReseauxHome img {
+.containeur-reseaux-home img {
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
 
-#formNousContacter {
+#form-nous-contacter {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -446,7 +458,7 @@ body{
     width: 103%;
 }
 
-#formNousContacter button {
+#form-nous-contacter button {
     background-color: #9b7356;
     color: white;
     border: none;
@@ -463,7 +475,7 @@ body{
     height: 50px;
 }
 
-#formNousContacter button:hover {
+#form-nous-contacter button:hover {
     background-color: #835f46;
 }
 
@@ -496,13 +508,13 @@ body{
 
 /* Responsive mobile */
 @media (max-width: 900px) {
-    #nousContacter {
+    #nous-contacter {
         flex-direction: column;
         gap: 30px;
     }
 
-    #infoNousContacter,
-    #formNousContacter {
+    #info-nous-contacter,
+    #form-nous-contacter {
         width: 100%;
     }
 
@@ -523,66 +535,66 @@ body{
         padding: 0;
         padding-top: 25%;
     }
-    #header #containeurImage{
+    #header #containeur-image{
         display: none;
     }
-    #infoHeader{
+    #info-header{
         width: 90vw;
     }
-    #containeurBtnImageHeader{
+    #containeur-btn-image-header{
         font-size: 0.6rem;
     }
-    #containeurBtnImageHeader a{
+    #containeur-btn-image-header a{
         padding: 10px;
     }
-    #containeurBtnImageHeader img{
+    #containeur-btn-image-header img{
         width: 20%;
     }
     .barSeparation{
         width: 75vw;
     }
 
-    #notreEquipe{
+    #notre-equipe{
         margin: 0;
         padding: 25px;
         width: 80%;
         margin-left: 2%;
     }
-    #notreEquipe img{
+    #notre-equipe img{
         display: none;
     }
-    #containeurInfoNotreEquipe{
+    #containeur-info-notre-equipe{
         width: 100%;
     }
 
-    #nosValeurs{
+    #nos-valeurs{
         padding: 0;
         padding-top: 40vh;
     }
-    #headerNosValeurs{
+    #header-nos-valeurs{
         width: 90%;
         margin-left: 5%;
     }
-    #containeurValeurs{
+    #containeur-valeurs{
         flex-direction: column;
     }
     .valeur{
         width: 80%;
         margin-left: 10%;
     }
-    #containeurActivites{
+    #containeur-activites{
         flex-direction: column;
     }
-    #quiSommesNous{
+    #qui-sommes-nous{
         width: 90%;
         padding: 0;
         margin-left: 5%;
         flex-direction: column;
     }
-    #infoQuiSommesNous{
+    #info-qui-sommes-nous{
         width: 100%;
     }
-    #quiSommesNous img{
+    #qui-sommes-nous img{
         margin-bottom: 15vh;
         width: 90%;
     }
@@ -592,13 +604,13 @@ body{
     #transition{
         height: 1vh;
     }
-    #nosPartenaires{
+    #nos-partenaires{
         width: 90%;
         margin-left: 5%;
         padding: 0;
         padding-bottom: 5%;
     }
-    #nousContacter{
+    #nous-contacter{
         padding: 0;
         width: 90%;
         margin-left: 5%;
@@ -606,10 +618,10 @@ body{
     #titre-containeur-reseaux-home{
         margin-top: 2vh;
     }
-    .containeurReseauxHome{
+    .containeur-reseaux-home{
         width: 70%;
     }
-    #formNousContacter{
+    #formnous-contacter{
         padding: 0;
         margin: 0;
         margin-bottom: 5vh;
@@ -625,7 +637,7 @@ body{
         width: 90%;
     }
 
-    #formNousContacter button{
+    #formnous-contacter button{
         width: 97%;
     }
 

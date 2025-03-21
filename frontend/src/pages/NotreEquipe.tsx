@@ -24,12 +24,12 @@ function NotreEquipe() {
 
     return (
         <>
-            <div id="pageNotreEquipe">
+            <div id="page-notre-equipe">
                 <NavBar />
-                <div id="NotreEquipe">
+                <div id="nos-membres">
                     <h1>Notre équipe</h1>
                     <p>Découvrez les passionnés qui font vivre l’association, organisent les activités et partagent avec vous <br /> leur amour du plein air. Ensemble, nous créons une aventure accessible à tous !</p>
-                    <div id="containeurEquipe">
+                    <div id="containeur-equipe">
                         {members.length > 0 ? (
                             members.map((member) => (
                                 <div key={member.id} className="equipe">
@@ -37,7 +37,7 @@ function NotreEquipe() {
                                     <p className="nom">{member.name}</p>
                                     <p className="fonction">{member.role}</p>
                                     <p className="description">{member.description}</p>
-                                    <div className="containeurReseaux">
+                                    <div className="containeur-reseaux">
                                         {member.social_links.map((link, index) => (
                                             <a key={index} href={link.url} target="_blank" rel="noopener noreferrer">
                                                 <div className="reseau">{link.network_name}</div>

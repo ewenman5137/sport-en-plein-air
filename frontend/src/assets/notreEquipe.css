@@ -1,34 +1,37 @@
 /* Styles globaux */
-#pageNotreEquipe {
+#page-nos-membres {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
     margin: 0;
     padding: 0;
+    text-align: justify;
 }
 
 /* Conteneur principal */
-#NotreEquipe {
+#nos-membres {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 50px 20px;
     padding-top: 10vh;
 }
 
 /* Titre */
-#NotreEquipe h1 {
+#nos-membres h1 {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-#NotreEquipe p {
+#nos-membres p {
     font-size: 1.2em;
     color: #666;
     margin-bottom: 40px;
 }
 
 /* Conteneur de l'équipe */
-#containeurEquipe {
+#containeur-equipe {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
@@ -80,10 +83,11 @@
     color: #555;
     padding: 0 10px;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 /* Réseaux sociaux */
-.containeurReseaux {
+.containeur-reseaux {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -110,7 +114,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    #containeurEquipe {
+    #containeur-equipe {
         grid-template-columns: 1fr;
     }
 }

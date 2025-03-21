@@ -40,9 +40,9 @@ function AdminPartenaire() {
 
     return (
         <>
-            <div id="pagePartenaires">
+            <div id="page-partenaires">
                 <Panel />
-                <div id="containerPartenaires">
+                <div id="container-partenaires">
                     <button>Ajouter un partenaire +</button>
                     <div id="partenaires">
                         {partenaires.length > 0 ? (

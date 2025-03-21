@@ -16,10 +16,10 @@ function Panel() {
 
     return (
         <>
-            <div id="Panel">
-                <button id="boutonBack">⬅</button>
+            <div id="panel">
+                <button id="bouton-back">⬅</button>
                 <img src="/logo.png" alt="Logo" />
-                <div id="containeurLiens">
+                <div id="containeur-liens">
                     <a href="/admin" className={location.pathname === "/admin" ? "active" : ""}>
                         <img src="/panel/activites.png" alt="" /><p>Activités</p><img src="/panel/liens.png" alt="" />
                     </a>

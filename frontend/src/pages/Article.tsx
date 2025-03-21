@@ -27,13 +27,13 @@ function Article() {
 
     return (
         <>
-            <div id="pageArticle">
+            <div id="page-article">
                 <NavBar />
                 <div id="article">
                     <button onClick={() => navigate(-1)}>Retour</button>
                     {activity ? (
                         <>
-                            <h1 id="nomActivite">{activity.title}</h1>
+                            <h1 id="nom-activite">{activity.title}</h1>
                             <img src={activity.image_path} alt={activity.title} />
                             <p id="description">{activity.description}</p>
                             <div id="plan"><strong>Plan:</strong> {activity.plan}</div>

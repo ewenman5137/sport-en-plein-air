@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-#politiqueMentions {
+#politique-mentions {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,17 +15,17 @@
     margin: 0 auto;
 }
 
-#politiqueMentions a {
+#politique-mentions a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-#politiqueMentions a:hover {
+#politique-mentions a:hover {
     opacity: 0.7;
 }
 
-.barDeSeparation {
+.bar-de-separation {
     width: 100%;
     max-width: 1200px;
     margin: 15px auto;
@@ -45,7 +45,7 @@
     font-size: 14px;
 }
 
-.containeurReseaux {
+.containeur-reseaux {
     display: flex;
     gap: 15px;
 }

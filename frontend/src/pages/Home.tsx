@@ -27,7 +27,7 @@ function Home() {
         <div id="containeur-home">
             <NavBar/>
             <div id="header">
-                <div id="containeurImage">
+                <div id="containeur-image">
                     <img id="image1" src="/imageAccueil/1.png" alt="" />
                     <img id="image2" src="/imageAccueil/2.png" alt="" />
                     <img id="image3" src="/imageAccueil/3.png" alt="" />
@@ -37,21 +37,21 @@ function Home() {
                     <img id="image7" src="/imageAccueil/7.png" alt="" />
                     <img id="image8" src="/imageAccueil/8.png" alt="" />
                 </div>
-                <div id="infoHeader">
+                <div id="info-header">
                     <h1>UQAC en Plein Air</h1>
                     <p>Notre association a pour mission de faire découvrir le Saguenay, en mettant à l’honneur le Mont Valin, la Station Édouard et les nombreuses activités sportives à Chicoutimi.</p>
-                    <div id="containeurBtnImageHeader">
-                        <a className="btn" href="#nosActivites">Nos activités</a>
+                    <div id="containeur-btn-image-header">
+                        <a className="btn" href="#nos-activites">Nos activités</a>
                         <a id="btn-insta" target="_blank" href="https://www.instagram.com/sport.plein.air.uqac/">Notre Instagram</a>
                         <img src="/montagne.png" alt="" />
                     </div>
-                    <div className="barSeparation"></div>
+                    <div className="bar-separation"></div>
                     <a href="#contact">Avez-vous des questions ?<br />Contactez-nous !</a>
                 </div>
             </div>
-            <div id="notreEquipe" className="animated">
-                <div id="containeurInfoNotreEquipe">
-                    <p>Qui sommes nous ?</p>
+            <div id="notre-equipe" className="animated">
+                <div id="containeur-info-notre-equipe">
+                    <p>QUI SOMMES NOUS ?</p>
                     <h1>Notre équipe</h1>
                     <p>Notre association a pour mission de faire découvrir le Saguenay, en mettant à l’honneur le Mont Valin, la Station Édouard et les nombreuses activités sportives à Chicoutimi. <br /><br />
                         Passionnés de plein air, nous voulons rendre l’aventure accessible à tous, à travers la randonnée, le ski, le camping et bien plus encore. Ici, chacun peut se dépasser, explorer et partager des moments uniques dans une nature grandiose.<br /><br />
@@ -61,17 +61,17 @@ function Home() {
                 </div>
                 <img src="/bureau.png" alt="" />
             </div>
-            <div id="nosValeurs" className="animated">
-                <div id="headerNosValeurs">
+            <div id="nos-valeurs" className="animated">
+                <div id="header-nos-valeurs">
                     <div>
                         <h1>Nos valeurs</h1>
                         <p>Notre association fonctionne sans but lucratif : chaque dollar récolté est entièrement réinvesti dans le projet pour offrir aux étudiants <br /> des expériences. Créée par des étudiants, pour des étudiants, elle a pour objectif de rendre l’aventure accessible à tous.</p>
                     </div>
                 </div>
-                <div id="containeurValeurs">
+                <div id="containeur-valeurs">
                     <div className="valeur">
                         <h1 className="chiffre">1</h1>
-                        <div className="contexteValeur">
+                        <div className="contexte-valeur">
                             <h2>Découverte du Saguenay : <br /> Un Terrain d’Aventure Sans Limites</h2>
                             <p>Le Saguenay est bien plus qu’une région : c’est un terrain de jeu grandeur nature pour tous les passionnés d’aventure. Notre association s’engage à faire découvrir ses paysages spectaculaires, ses sentiers méconnus et ses sites naturels d’exception. <br />
                             Que ce soit à travers des randonnées, des sorties en raquettes ou des excursions en canot, nous voulons ouvrir les portes de la nature à tous ceux qui cherchent à s’évader et à repousser leurs limites. </p>
@@ -79,7 +79,7 @@ function Home() {
                     </div>
                     <div className="valeur">
                         <h1 className="chiffre">2</h1>
-                        <div className="contexteValeur">
+                        <div className="contexte-valeur">
                             <h2>Des Sommets à Explorer</h2>
                             <p>Le Mont Valin et la Station Édouard sont des joyaux du Saguenay que nous avons à cœur de promouvoir. Véritables paradis pour les amateurs de glisse, ces lieux offrent des pistes de ski, des sentiers de raquettes et des panoramas à couper le souffle. <br /><br />
                             Notre mission est de faire connaître ces sites incontournables à travers des sorties, des événements et des activités qui rassemblent les amoureux de la montagne. Que tu sois un skieur aguerri ou un aventurier en quête de nouveaux défis, ces sommets n’attendent que toi pour révéler toute leur magie.</p>
@@ -87,49 +87,49 @@ function Home() {
                     </div>
                     <div className="valeur">
                         <h1 className="chiffre">3</h1>
-                        <div className="contexteValeur">
+                        <div className="contexte-valeur">
                             <h2>Sport et Aventure à Chicoutimi </h2>
                             <p>Chicoutimi est un carrefour d’activités sportives et un point de départ idéal pour les amateurs de plein air. Au-delà des montagnes et des sentiers, notre association met en avant la diversité des sports et des aventures accessibles en ville et aux alentours. Vélo, escalade, kayak, trail... il y a mille et une façons de se dépasser tout en profitant de la nature. Nous voulons créer une communauté dynamique, où chacun trouve sa place et découvre de nouvelles passions.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="nosActivites">
+            <div id="nos-activites">
                 <h1>Nos activités</h1>
-                <p>Notre association te propose une multitude d’activités en plein air pour découvrir le Saguenay autrement, repousser tes limites et partager des moments inoubliables avec une  communauté passionnée.</p>
-                <div id="containeurActivites">
+                <p>Notre association te propose une multitude d’activités en plein air pour découvrir le Saguenay autrement, <br />repousser tes limites et partager des moments inoubliables avec une  communauté passionnée.</p>
+                <div id="containeur-activites">
                     <div className="activite">
                         <img src="/activite1.png" alt="" />
-                        <h2 className="titreActivite">Ski au mont-valin</h2>
+                        <h2 className="titre-activite">Ski au mont-valin</h2>
                         <p>Viens profiter d’une journée inoubliable sur les pistes du Mont Valin ! Entre descentes enneigées, panoramas à couper le souffle et ambiance conviviale, cette sortie est l’occasion parfaite de glisser, s’amuser et se dépasser.</p>
-                        <div className="footerActivite">
-                            <p className="dateActivite">May 20th 2020</p>
+                        <div className="footer-activite">
+                            <p className="date-activite">May 20th 2020</p>
                             <a href="/activites/1">En savoir +</a>
                         </div>
                     </div>
                     <div className="activite">
                         <img src="/activite2.png" alt="" />
-                        <h2 className="titreActivite">Escalade de glace</h2>
+                        <h2 className="titre-activite">Escalade de glace</h2>
                         <p>Viens repousser tes limites et découvrir les sensations uniques de l’escalade de glace sur les parois gelées du Saguenay ! Encadré par des passionnés, tu apprendras à manier piolets et crampons pour grimper en toute sécurité.</p>
-                        <div className="footerActivite">
-                            <p className="dateActivite">May 20th 2020</p>
+                        <div className="footer-activite">
+                            <p className="date-activite">May 20th 2020</p>
                             <a href="">En savoir +</a>
                         </div>
                     </div>
                     <div className="activite">
                         <img src="/activite3.png" alt="" />
-                        <h2 className="titreActivite">Ski au mont-francis</h2>
+                        <h2 className="titre-activite">Ski au mont-francis</h2>
                         <p>La montagne Mont-Francis, beau et gentil au premier abord, peut vous proposer des pistes à la fois ludiques et techniques, parfaites pour y passer une journée après une semaine de cours.</p>
-                        <div className="footerActivite">
-                            <p className="dateActivite">May 20th 2020</p>
+                        <div className="footer-activite">
+                            <p className="date-activite">May 20th 2020</p>
                             <a href="">En savoir +</a>
                         </div>
                     </div>
                 </div>
-                <a href="/nos-activites">Voir toutes nos activités</a>
+                <a  href="/nos-activites">Voir toutes nos activités</a>
             </div>
-            <div id="quiSommesNous" className="animated">
-                <div id="infoQuiSommesNous">
+            <div id="qui-sommes-nous" className="animated">
+                <div id="info-qui-sommes-nous">
                     <p>QUI SOMMES-NOUS ?</p>
                     <h1>Tout comprendre sur l'asso</h1>
                     <p>Notre association, créée par des étudiants et pour des étudiants, a pour mission de faire découvrir le Saguenay, de promouvoir les activités en plein air et de rassembler une communauté autour de l’aventure et du dépassement de soi. À travers des sorties, des événements et des initiations sportives, nous mettons tout en œuvre pour rendre la nature et le sport accessibles à tous, sans but lucratif.<br /><br />
@@ -143,9 +143,9 @@ function Home() {
             <div id="transition">
                 <h1>Pourquoi ne pas nous rejoindre ?</h1>
             </div>
-            <div id="nosPartenaires" className="animated">
+            <div id="nos-partenaires" className="animated">
                 <h1>Ils nous font confiance</h1>
-                <div id="containeurEntreprise">
+                <div id="containeur-entreprise">
                     <img src="/entreprise/decathlon.png" alt="" />
                     <img src="/entreprise/sportsExperts.png" alt="" />
                     <img src="/entreprise/uqac.png" alt="" />
@@ -154,18 +154,18 @@ function Home() {
                     <img src="/entreprise/uqac.png" alt="" />
                 </div>
             </div>
-            <div id="nousContacter" className="animated">
-                <div id="infoNousContacter">
+            <div id="nous-contacter" className="animated">
+                <div id="info-nous-contacter">
                     <h1>Nous contacter</h1>
                     <p>N’hésite pas à nous contacter ! Que ce soit pour en savoir plus sur nos activités, proposer une collaboration ou rejoindre l’aventure, nous serons ravis de te répondre. Remplis le formulaire ci-dessous et nous reviendrons vers toi dès que possible.</p>
                     <p id="titre-containeur-reseaux-home">Réseaux sociaux</p>
-                    <div className="containeurReseauxHome">
+                    <div className="containeur-reseaux-home">
                         <a href="" target="_blank"><img src="/reseaux/insta_black.png" alt="" /></a>
                         <a href="" target="_blank"><img id="facebook_black" src="/reseaux/facebook.svg" alt="" /></a>
                         <a href="" target="_blank"><img src="/reseaux/mail_black.png" alt="" /></a>
                     </div>
                 </div>
-                <div id="formNousContacter">
+                <div id="form-nous-contacter">
                     <div className="champ">
                         <p>Nom de l'entreprise</p>
                         <input type="text" placeholder="ex : google" />

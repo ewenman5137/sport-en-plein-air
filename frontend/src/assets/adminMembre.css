@@ -1,4 +1,4 @@
-#pageMembres{
+#page-membres{
     display: flex;
     height: 100%;
 }
@@ -25,7 +25,7 @@
 }
 
 /* Conteneur des membres */
-#containeurMembres {
+#containeur-membres {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;

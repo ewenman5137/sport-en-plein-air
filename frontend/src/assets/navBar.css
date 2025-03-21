@@ -1,4 +1,4 @@
-#navBar{
+#nav-bar{
     position: fixed;
     height: 10vh;
     width: 100%;
@@ -6,7 +6,7 @@
     z-index: 1000;
 }
 
-#containeurNavBar{
+#containeur-nav-bar{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,16 +18,16 @@
     padding-right: 2%;
     transition: background 0.3s ease-in-out;
 }
-#containeurNavBar:hover {
+#containeur-nav-bar:hover {
     background: #ffffffa8; /* Augmente l'opacité au survol pour plus de lisibilité */
 }
-#containeurLiensNavBar{
+#containeur-liens-nav-bar{
     display: flex;
     width: 70%;
     justify-content: space-around;
     margin-right: 10%;
 }
-#containeurLiensNavBar a{
+#containeur-liens-nav-bar a{
     color: black;
     text-decoration: none;
     font-size: 1.1rem;
@@ -38,7 +38,7 @@
 
 
 @media (max-width: 900px) {
-    #navBar{
+    #nav-bar{
         width: 100vw;
     }
 }

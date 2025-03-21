@@ -39,13 +39,13 @@ function AdminEquipe() {
 
     return (
         <>
-            <div id="pageMembres">
+            <div id="page-membres">
                 <Panel />
-                <div id="containeurMembresRecherche">
+                <div id="containeur-membres-recherche">
                     <div className="admin-header">
                         <button className="add-member">Ajouter un membre +</button>
                     </div>
-                    <div id="containeurMembres">
+                    <div id="containeur-membres">
                         {members.length > 0 ? (
                             members.map((member, index) => (
                                 <div key={member.id ?? index} className="membre">

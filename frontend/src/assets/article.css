@@ -1,5 +1,5 @@
 /* Répare le problème de chevauchement du header */
-#pageArticle {
+#page-article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,7 +34,7 @@
 }
 
 /* Titre de l'activité */
-#nomActivite {
+#nom-activite {
     font-size: 2.5em;
     font-weight: bold;
     text-align: left;
@@ -82,7 +82,7 @@
         padding: 15px;
     }
 
-    #nomActivite {
+    #nom-activite {
         font-size: 2em;
     }
 

@@ -28,13 +28,13 @@ function Login() {
     };
     return (
         <div id="login">
-            <img id="imageLogin" src="/login.png" alt="" />
-            <div id="containeurLogin">
+            <img id="image-login" src="/login.png" alt="" />
+            <div id="containeur-login">
                 <img src="/logo.png" alt="" />
                 <h2>Portail administrateur</h2>
                 <p>Si vous n'êtes pas administrateur alors vous êtes perdu</p>
                 <a href="/">Cliquer ici pour revenir en lieu sûr</a>
-                <div id="containeurFormulaireLogin">
+                <div id="containeur-formulaire-login">
                     <input 
                         type="text" 
                         placeholder="ex : monmail@gmail.com" 
@@ -47,7 +47,7 @@ function Login() {
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <button id="btnConnexion" onClick={handleLogin}>Se connecter</button>
+                    <button id="btn-connexion" onClick={handleLogin}>Se connecter</button>
                 </div>
             </div>
         </div>

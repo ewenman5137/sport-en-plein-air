@@ -37,21 +37,21 @@ function AdminActivites() {
     }, []);
     return (
         <>
-            <div id="pageAdminActivites">
+            <div id="page-admin-activites">
                 <Panel />
-                <div id="containeurAdminActivites">
+                <div id="containeur-admin-activites">
                     <div id="admin-header">
                         <input type="text" placeholder="Search" className="search-bar" />
                         <button className="add-activity">Ajouter une activité +</button>
                     </div>
-                    <div id="containeurActivites">
+                    <div id="containeur-activites">
                         {activities.map((activity) => (
                             <div key={activity.id} className="activite">
                                 <button className="delete-btn" onClick={() => handleDelete(activity.id)}>🗑</button>
                                 <img src={activity.image_path} alt={activity.title} />
                                 <h1>{activity.title}</h1>
                                 <p>{activity.description}</p>
-                                <div className="containeurDate">
+                                <div className="containeur-date">
                                     <p>{new Date(activity.date).toLocaleDateString()}</p>
                                     <a href={`/activite/${activity.id}`}>En savoir +</a>
                                 </div>

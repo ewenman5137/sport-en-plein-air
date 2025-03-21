@@ -1,5 +1,5 @@
 /* Conteneur principal */
-#Panel {
+#panel {
     width: 100%;
     max-width: 300px;
     background: white;
@@ -10,7 +10,7 @@
     width: 16%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
-#boutonBack{
+#bouton-back{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,26 +21,26 @@
     margin-top: 5%;
     font-size: 1.5em;
 }
-#boutonBack:hover{
+#bouton-back:hover{
     background-color: white;
     cursor: pointer;
 }
 /* Logo */
-#Panel img {
+#panel img {
     width: 100px;
     height: auto;
     margin-bottom: 20px;
 }
 
 /* Liens */
-#containeurLiens {
+#containeur-liens {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-#containeurLiens a {
+#containeur-liens a {
     display: flex;
     align-items: center;
     padding: 5px;
@@ -53,12 +53,12 @@
 }
 
 /* Style pour l'élément actif */
-#containeurLiens a.active {
+#containeur-liens a.active {
     background-color: #6b814d; /* Vert */
     color: white;
 }
 
-#containeurLiens a:hover {
+#containeur-liens a:hover {
     background-color: #cdd5a6;
 }
 

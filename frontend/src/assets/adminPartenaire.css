@@ -1,8 +1,8 @@
-#pagePartenaires{
+#page-partenaires{
     display: flex;
     height: 100%;
 }
-#containerPartenaires{
+#container-partenaires{
     display: flex;
     flex-direction: column;
 }
