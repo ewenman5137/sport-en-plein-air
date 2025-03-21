@@ -83,6 +83,7 @@
     }
 
     #footer {
-        padding: 20px;
+        width: 95%;
+        padding: 2.5% ;
     }
 }

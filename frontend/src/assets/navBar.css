@@ -6,11 +6,6 @@
     z-index: 1000;
 }
 
-
-
-
-
-
 #containeurNavBar{
     display: flex;
     align-items: center;
@@ -39,4 +34,11 @@
 }
 #logo{
     height: 8vh;
+}
+
+
+@media (max-width: 900px) {
+    #navBar{
+        width: 100vw;
+    }
 }
