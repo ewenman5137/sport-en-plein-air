@@ -3,9 +3,18 @@ import "../assets/card.css"
 import NavBar from "../component/NavBar";
 import Footer from "../component/Footer";
 import { useEffect } from "react";
+import { useState } from 'react';
 
   
-function Home() {    
+function Home() {  
+    
+    const [formData, setFormData] = useState({
+        entreprise: '',
+        email: '',
+        objet: '',
+        message: '',
+      });
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -22,6 +31,41 @@ function Home() {
             elements.forEach((el) => observer.unobserve(el));
         };
     }, []);
+
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+          ...prev,
+          [name]: value,
+        }));
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        try {
+          const res = await fetch('http://localhost:5000/api/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+    
+          if (res.ok) {
+            alert("Email envoyé avec succès !");
+            setFormData({ entreprise: '', email: '', objet: '', message: '' });
+          } else {
+            alert("Erreur lors de l’envoi.");
+          }
+        } catch (error) {
+          console.error(error);
+          alert("Erreur réseau.");
+        }
+      };
+
+
     return (
         <>
         <div id="containeur-home">
@@ -165,35 +209,55 @@ function Home() {
                         <a href="" target="_blank"><img src="/reseaux/mail_black.png" alt="" /></a>
                     </div>
                 </div>
-                <div id="form-nous-contacter">
+                <form id="form-nous-contacter" onSubmit={handleSubmit}>
                     <div className="champ">
                         <p>Nom de l'entreprise</p>
-                        <input type="text" placeholder="ex : google" />
+                        <input
+                        type="text"
+                        name="entreprise"
+                        placeholder="ex : google"
+                        value={formData.entreprise}
+                        onChange={handleChange}
+                        />
                     </div>
                     <div className="champ">
                         <p>Email</p>
-                        <input type="text" placeholder="ex : mail@google.com" />
+                        <input
+                        type="text"
+                        name="email"
+                        placeholder="ex : mail@google.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        />
                     </div>
                     <div className="champ">
                         <p>Objet</p>
-                        <select name="" id="">
-                            <option value="test">Veuillez sélectionner un objet.</option>
-                            <option value="test">Demande de partenariat pour des activités de plein air</option>
-                            <option value="test">Candidature spontanée pour un poste dans les sports de plein air</option>
-                            <option value="test">Proposition de collaboration pour des événements outdoor</option>
-                            <option value="test">Demande d’informations sur vos services et équipements sportifs</option>
-                            <option value="test">Proposition de test et de promotion de vos produits outdoor</option>
+                        <select name="objet" value={formData.objet} onChange={handleChange}>
+                        <option value="">Veuillez sélectionner un objet.</option>
+                        <option value="Demande de partenariat">Demande de partenariat pour des activités de plein air</option>
+                        <option value="Candidature spontanée">Candidature spontanée pour un poste dans les sports de plein air</option>
+                        <option value="Collaboration événement">Proposition de collaboration pour des événements outdoor</option>
+                        <option value="Demande d’informations">Demande d’informations sur vos services et équipements sportifs</option>
+                        <option value="Promotion produit">Proposition de test et de promotion de vos produits outdoor</option>
                         </select>
                     </div>
                     <div className="champ">
                         <p>Message</p>
-                        <textarea name="" id="" placeholder="ex : Je vous contact pour ..."></textarea>
+                        <textarea
+                        name="message"
+                        placeholder="Entrez votre message ici..."
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        />
                     </div>
-                    <button>Envoyer</button>
+
+                    <button type="submit">Envoyer</button>
+                    </form>
                 </div>
             </div>
             <Footer/>
-        </div>
+        
         </>
     );
 }
