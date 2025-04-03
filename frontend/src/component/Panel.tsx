@@ -18,16 +18,16 @@ function Panel() {
         <>
             <div id="panel">
                 <button id="bouton-back">⬅</button>
-                <img src="/logo.png" alt="Logo" />
+                <a href="/"><img src="/logo.png" alt="Logo" /></a>
                 <div id="containeur-liens">
                     <a href="/admin" className={location.pathname === "/admin" ? "active" : ""}>
-                        <img src="/panel/activites.png" alt="" /><p>Activités</p><img src="/panel/liens.png" alt="" />
+                        <img src="/panel/activites.png" alt="" /><p>Activités</p><img src="/panel/liens.svg" alt="" />
                     </a>
                     <a href="/admin-partenaire" className={location.pathname === "/admin-partenaire" ? "active" : ""}>
-                        <img src="/panel/partenaire.png" alt="" /><p>Partenaire</p><img src="/panel/liens.png" alt="" />
+                        <img src="/panel/partenaire.png" alt="" /><p>Partenaire</p><img src="/panel/liens.svg" alt="" />
                     </a>
                     <a href="/admin-equipe" className={location.pathname === "/admin-equipe" ? "active" : ""}>
-                        <img src="/panel/equipe.svg" alt="" /><p>Equipe</p><img src="/panel/liens.png" alt="" />
+                        <img src="/panel/equipe.svg" alt="" /><p>Equipe</p><img src="/panel/liens.svg" alt="" />
                     </a>
                 </div>
                 <button onClick={handleLogout} id="deconnexion">

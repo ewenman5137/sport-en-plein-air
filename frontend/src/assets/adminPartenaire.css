@@ -1,36 +1,85 @@
-#page-partenaires{
+#page-partenaires {
     display: flex;
-    height: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
-#container-partenaires{
+
+#container-partenaires {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 2rem;
+    overflow-y: auto;
 }
-#partenaires{
+
+#container-partenaires > button {
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #185f1a;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#container-partenaires > button:hover {
+    background-color: #6b814d;
+}
+
+#partenaires {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.partenaire {
+    position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 2%;
-    flex-wrap: wrap;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    padding: 1rem;
+    border-radius: 16px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
 }
-.partenaire{
+
+.partenaire:hover {
+    transform: scale(1.03);
+}
+
+.partenaire img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.delete-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 32px;
+    height: 32px;
     display: flex;
-    flex-direction: column;
-    width: 30%;
-    background-color: orange;
-    margin-left: 1%;
-    border-radius: 20px;
-}
-.partenaire img{
-    width: 80%;
-}
-.delete-btn{
-    width: 10%;
-    aspect-ratio: 1/1;
-    margin-bottom: -5%;
-    z-index: 1000;
-    border-radius: 100%;
-    background-color: red;
-    color: white;
+    align-items: center;
+    justify-content: center;
     border: none;
-    font-weight: bold;
+    background-color: crimson;
+    color: white;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
 }

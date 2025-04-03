@@ -10,6 +10,9 @@
     width: 16%;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
+#panel img{
+    object-fit: contain;
+}
 #bouton-back{
     display: flex;
     justify-content: center;
@@ -43,6 +46,7 @@
 #containeur-liens a {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     padding: 5px;
     border-radius: 10px;
     text-decoration: none;
@@ -62,8 +66,15 @@
     background-color: #cdd5a6;
 }
 
+#containeur-liens img{
+    height: 25px;
+    width: 25px;
+    margin: 0;
+}
+
 /* Bouton de déconnexion */
 #deconnexion {
+    display: flex;
     margin-top: auto;
     background: none;
     border: none;
@@ -77,4 +88,14 @@
 
 #deconnexion:hover {
     color: red;
+}
+
+#deconnexion img{
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-right: 10%;
 }
