@@ -17,7 +17,7 @@ function Activites() {
     const [activities, setActivities] = useState<Activity[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/activites")  // Assurez-vous que l'URL correspond à votre backend
+        fetch("http://127.0.0.1:5000/activites")  // Assurez-vous que l'URL correspond à votre backend
             .then((response) => response.json())
             .then((data: Activity[]) => setActivities(data))
     }, []);

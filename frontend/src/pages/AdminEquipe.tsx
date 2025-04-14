@@ -32,7 +32,7 @@ function AdminEquipe() {
     }, []);
 
     useEffect(() => {
-        fetch("http://localhost:5000/membres")
+        fetch("http://127.0.0.1:5000/membres")
             .then((res) => res.json())
             .then((data: Member[]) => setMembers(data))
             .catch(console.error);
@@ -53,7 +53,7 @@ function AdminEquipe() {
     };
 
     const handleDelete = (id: number) => {
-        fetch(`http://localhost:5000/membres/${id}`, { method: "DELETE" })
+        fetch(`http://127.0.0.1:5000/membres/${id}`, { method: "DELETE" })
             .then(() => setMembers(members.filter((m) => m.id !== id)))
             .catch(console.error);
     };
@@ -101,7 +101,7 @@ function AdminEquipe() {
         if (imageFile) {
             let filename = isEditing && formData.id ? `${formData.id}.png` : "";
             if (!isEditing) {
-                const res = await fetch("http://localhost:5000/membres");
+                const res = await fetch("http://127.0.0.1:5000/membres");
                 const list = await res.json();
                 const lastId = Math.max(...list.map((m: Member) => m.id), 0);
                 filename = `${lastId + 1}.png`;
@@ -110,8 +110,8 @@ function AdminEquipe() {
         }
 
         const url = isEditing
-            ? `http://localhost:5000/membres/${formData.id}`
-            : "http://localhost:5000/membres";
+            ? `http://127.0.0.1:5000/membres/${formData.id}`
+            : "http://127.0.0.1:5000/membres";
         const method = isEditing ? "PUT" : "POST";
 
         try {

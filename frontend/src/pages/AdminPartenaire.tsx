@@ -14,7 +14,7 @@ function AdminPartenaire() {
     const [partenaires, setPartenaires] = useState<Partenaire[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/partenaires")
+        fetch("http://127.0.0.1:5000/partenaires")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Erreur lors de la récupération des partenaires");

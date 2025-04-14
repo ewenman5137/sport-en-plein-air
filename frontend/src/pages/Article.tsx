@@ -19,7 +19,7 @@ function Article() {
     const [activity, setActivity] = useState<Activity | null>(null);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/activites/${id}`)
+        fetch(`http://127.0.0.1:5000/activites/${id}`)
             .then((response) => response.json())
             .then((data: Activity) => setActivity(data))
             .catch((error) => console.error("Erreur lors de la récupération de l'activité:", error));
