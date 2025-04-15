@@ -1,13 +1,21 @@
 FROM node:20.12.2
 
+# Définir le répertoire de travail
 WORKDIR /app
 
-COPY package*.json ./
+# Copier les fichiers de dépendances
+COPY package.json package-lock.json ./
 
-RUN npm install
+# Installer les dépendances (avec résolution souple)
+RUN npm install --legacy-peer-deps
 
+RUN npm fund
+
+# Copier le reste du code source
 COPY . .
 
-EXPOSE 5173
+# Exposer le port de l'application
+EXPOSE 3000
 
-CMD ["npm", "run", "dev", "--", "--host"]
+# Commande par défaut pour lancer l'application
+CMD ["npm", "run", "dev"]

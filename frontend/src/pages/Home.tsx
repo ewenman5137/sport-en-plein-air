@@ -33,7 +33,7 @@ function Home() {
     }, []);
 
 
-    const handleChange = (e) => {
+    const handleChange = (e: { target: { name: any; value: any; }; }) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
           ...prev,
@@ -41,7 +41,7 @@ function Home() {
         }));
       };
     
-      const handleSubmit = async (e) => {
+      const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
     
         try {
