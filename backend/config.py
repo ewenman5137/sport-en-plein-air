@@ -14,8 +14,6 @@ import bcrypt
 
 ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "admin")
 ADMIN_PASSWORD_HASH = os.getenv("ADMIN_PASSWORD")  # hash bcrypt
-print("🚀 ADMIN_USERNAME =", os.getenv("ADMIN_USERNAME"))
-print("🚀 ADMIN_PASSWORD =", os.getenv("ADMIN_PASSWORD"))
 
 def verify_password(input_password: str) -> bool:
     return bcrypt.checkpw(input_password.encode(), ADMIN_PASSWORD_HASH.encode())

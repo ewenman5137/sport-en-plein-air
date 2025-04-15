@@ -96,13 +96,14 @@
 }
 
 .containeur-date p {
+    margin: 0;
     font-size: 0.85rem;
     color: #777;
 }
 
 .containeur-date a {
     font-size: 0.85rem;
-    color: #007bff;
+    color: #171717;
     text-decoration: underline;
 }
 
@@ -110,42 +111,7 @@
     color: #0056b3;
 }
 
-.delete-btn,
-.edit-btn {
-    position: absolute;
-    top: 10px;
-    width: 32px;
-    height: 32px;
-    border: none;
-    border-radius: 50%;
-    font-size: 16px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
 
-.delete-btn {
-    right: 10px;
-    background: crimson;
-    color: white;
-}
-
-.delete-btn:hover {
-    background-color: darkred;
-}
-
-.edit-btn {
-    right: 50px;
-    background: #007bff;
-    color: white;
-}
-
-.edit-btn:hover {
-    background-color: #0056b3;
-}
 
 /* Modal */
 .modal {

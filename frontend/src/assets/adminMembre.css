@@ -23,7 +23,9 @@
 .add-member:hover {
     background-color: #5c8d5c;
 }
-
+#containeur-membres-recherche{
+    width: 80%;
+}
 /* Conteneur des membres */
 #containeur-membres {
     display: grid;
@@ -48,23 +50,6 @@
     transform: scale(1.05);
 }
 
-/* Bouton de suppression */
-.delete-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: red;
-    color: white;
-    border: none;
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.delete-btn:hover {
-    background: darkred;
-}
 
 /* Image du membre */
 .membre img {
@@ -94,22 +79,6 @@
     padding: 0 10px;
 }
 
-/* Bouton d'édition */
-.edit-btn {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-.edit-btn:hover {
-    background: #0056b3;
-}
-
 /* Pagination */
 .pagination {
     text-align: center;
@@ -132,4 +101,33 @@
 .pagination button.active {
     background: #007bff;
     color: white;
+}
+
+
+.edit-btn,
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bouton édition (à gauche, bleu) */
+.edit-btn {
+    left: 10px;
+    background-color: #007bff;
+}
+
+/* Bouton suppression (à droite, rouge) */
+.delete-btn {
+    right: 10px;
+    background-color: #dc3545;
 }

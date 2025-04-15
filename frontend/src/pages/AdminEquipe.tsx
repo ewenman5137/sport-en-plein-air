@@ -99,14 +99,7 @@ function AdminEquipe() {
         dataToSend.append("social_links", JSON.stringify(formData.social_links || []));
 
         if (imageFile) {
-            let filename = isEditing && formData.id ? `${formData.id}.png` : "";
-            if (!isEditing) {
-                const res = await fetch("http://127.0.0.1:5000/membres");
-                const list = await res.json();
-                const lastId = Math.max(...list.map((m: Member) => m.id), 0);
-                filename = `${lastId + 1}.png`;
-            }
-            dataToSend.append("image", imageFile, filename);
+            dataToSend.append("image", imageFile);
         }
 
         const url = isEditing
@@ -139,17 +132,10 @@ function AdminEquipe() {
                                 <div key={member.id} className="membre">
                                     <button className="delete-btn" onClick={() => handleDelete(member.id)}>🗑</button>
                                     <button className="edit-btn" onClick={() => openEditModal(member)}>✏️</button>
-                                    <img src={member.image_path || "default-image.png"} alt={member.name} />
+                                    <img src={`http://127.0.0.1:5000${member.image_path}`} alt={member.name} />
                                     <h1>{member.name}</h1>
                                     <p className="fonction">{member.role}</p>
                                     <p className="description">{member.description}</p>
-                                    <ul className="social-list">
-                                        {member.social_links?.map((link, index) => (
-                                            <li key={index}>
-                                                <strong>{link.network_name}</strong> : <a href={link.url}>{link.url}</a>
-                                            </li>
-                                        ))}
-                                    </ul>
                                 </div>
                             ))
                         ) : (

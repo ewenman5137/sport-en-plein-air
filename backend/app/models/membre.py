@@ -15,22 +15,37 @@ class Member(db.Model):
     def __repr__(self):
         return f"<Member {self.name}>"
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "role": self.role,
+            "description": self.description,
+            "image_path": self.image_path,
+            "social_links": [link.to_dict() for link in self.social_links]
+        }
+
     @staticmethod
     def insert_default_content():
-        """ Ajoute des names par défaut si la table est vide """
+        """ Ajoute des membres par défaut si la table est vide """
         membre_data = [
-            {"image_path": "/membres/1.png", "name": "Ahmad Chamouni", "role": "président", "description": "Salut les futurs aventuriers ! Adopté par le plein air, j'ai troqué mon appart contre une tente et je veux vous donner les moyens de te faire tripper par la nature à travers l'aventure."},
-            {"image_path": "/membres/2.png", "name": "Francis Gauthier", "role": "Vice-président", "description": "YOOOO, salut tout le monde! Originaire de Montréal, je viens d'arriver au Saguenay cet été pour commencer le BAC en intervention plein air."},
-            {"image_path": "/membres/3.png", "name": "Emeric Douvier", "role": "Responsable de la communication", "description": "Etudiant en administration, je suis celui qui va inonder vos réseaux de nos aventures, de nos défis et nos chutes spectaculaires qui deviendront légendaires."}
+            {"image_path": "/membres/image/1.png", "name": "Ahmad Chamouni", "role": "Président", "description": "Salut les futurs aventuriers ! Adopté par le plein air, j'ai troqué mon appart contre une tente et je veux vous donner les moyens de te faire tripper par la nature à travers l'aventure."},
+            {"image_path": "/membres/image/2.png", "name": "Francis Gauthier", "role": "Vice-président", "description": "YOOOO, salut tout le monde! Originaire de Montréal, je viens d'arriver au Saguenay cet été pour commencer le BAC en intervention plein air."},
+            {"image_path": "/membres/image/3.png", "name": "Emeric Douvier", "role": "Responsable de la communication", "description": "Étudiant en administration, je suis celui qui va inonder vos réseaux de nos aventures, de nos défis et nos chutes spectaculaires qui deviendront légendaires."}
         ]
 
-        if not Member.query.first():  # Vérifie si la table est vide
-            print("données inserer")
+        if not Member.query.first():
+            print("📥 Insertion des membres...")
             for membre in membre_data:
-                new_membre = Member(image_path=membre["image_path"], name=membre["name"], role=membre["role"], description=membre["description"])
+                new_membre = Member(
+                    image_path=membre["image_path"],
+                    name=membre["name"],
+                    role=membre["role"],
+                    description=membre["description"]
+                )
                 db.session.add(new_membre)
             db.session.commit()
-            print("✅ names insérées avec succès !")
+            print("✅ Membres insérés avec succès !")
         else:
             print("⚠️ La table membre contient déjà des données, aucune insertion nécessaire.")
 
@@ -46,29 +61,36 @@ class SocialLink(db.Model):
     def __repr__(self):
         return f"<SocialLink {self.network_name} for Member ID {self.member_id}>"
 
-
-
+    def to_dict(self):
+        return {
+            "network_name": self.network_name,
+            "url": self.url
+        }
 
     @staticmethod
     def insert_default_content():
-        """ Ajoute des names par défaut si la table est vide """
+        """ Ajoute des réseaux sociaux par défaut si la table est vide """
         social_links = [
-            {"membre_id": 1, "network_name": "Meta", "url": "meta.com"},
-            {"membre_id": 1, "network_name": "Instagram", "url": "meta.com"},
-            {"membre_id": 1, "network_name": "Whatsapp", "url": "meta.com"},
-            {"membre_id": 2, "network_name": "Meta", "url": "meta.com"},
-            {"membre_id": 2, "network_name": "Instagram", "url": "meta.com"},
-            {"membre_id": 3, "network_name": "Whatsapp", "url": "meta.com"},
-            {"membre_id": 3, "network_name": "Instagram", "url": "meta.com"},
-            {"membre_id": 3, "network_name": "Whatsapp", "url": "meta.com"},
+            {"membre_id": 1, "network_name": "Meta", "url": "https://meta.com"},
+            {"membre_id": 1, "network_name": "Instagram", "url": "https://instagram.com"},
+            {"membre_id": 1, "network_name": "WhatsApp", "url": "https://whatsapp.com"},
+            {"membre_id": 2, "network_name": "Meta", "url": "https://meta.com"},
+            {"membre_id": 2, "network_name": "Instagram", "url": "https://instagram.com"},
+            {"membre_id": 3, "network_name": "WhatsApp", "url": "https://whatsapp.com"},
+            {"membre_id": 3, "network_name": "Instagram", "url": "https://instagram.com"},
+            {"membre_id": 3, "network_name": "Facebook", "url": "https://facebook.com"}
         ]
 
-        if not Member.query.first():  # Vérifie si la table est vide
-            print("données inserer")
-            for links in social_links:
-                new_links = Member(membre_id=links["membre_id"], network_name=links["network_name"], url=links["url"])
-                db.session.add(new_links)
+        if not SocialLink.query.first():
+            print("📥 Insertion des réseaux sociaux...")
+            for link in social_links:
+                new_link = SocialLink(
+                    member_id=link["membre_id"],
+                    network_name=link["network_name"],
+                    url=link["url"]
+                )
+                db.session.add(new_link)
             db.session.commit()
-            print("✅ links insérées avec succès !")
+            print("✅ Réseaux insérés avec succès !")
         else:
-            print("⚠️ La table membre contient déjà des données, aucune insertion nécessaire.")
+            print("⚠️ La table social_link contient déjà des données, aucune insertion nécessaire.")

@@ -21,7 +21,7 @@ load_dotenv()
 
 # Initialisation de l'application Flask
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app) 
 
 # Config Outlook à partir de l'environnement
 app.config['MAIL_SERVER'] = 'smtp.office365.com'
@@ -53,4 +53,4 @@ with app.app_context():
     Partenaire.insert_default_content()
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=True)

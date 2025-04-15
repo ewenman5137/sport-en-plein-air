@@ -9,13 +9,11 @@ COPY package.json package-lock.json ./
 # Installer les dépendances (avec résolution souple)
 RUN npm install --legacy-peer-deps
 
-RUN npm fund
-
 # Copier le reste du code source
 COPY . .
 
-# Exposer le port de l'application
-EXPOSE 3000
+# Exposer le port Vite (pas 3000 mais 5173 par défaut)
+EXPOSE 5173
 
-# Commande par défaut pour lancer l'application
-CMD ["npm", "run", "dev"]
+# Commande pour lancer le serveur Vite avec --host (nécessaire dans Docker)
+CMD ["npm", "run", "dev", "--", "--host"]

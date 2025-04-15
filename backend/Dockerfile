@@ -2,11 +2,14 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install watchdog
 
 COPY . .
 
-EXPOSE 5000
+RUN chmod +x watchmedo.sh
 
-CMD ["python", "run.py"]
+
+# Pas besoin de CMD ici, docker-compose s'en charge
+EXPOSE 5000
