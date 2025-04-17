@@ -27,7 +27,7 @@ function Home() {
 
 
     useEffect(() => {
-    fetch("http://127.0.0.1:5000/activites")
+    fetch("/api/activites")
         .then((res) => res.json())
         .then((data: Activity[]) => setActivities(data))
         .catch((error) => console.error("Erreur chargement activités :", error));
@@ -64,7 +64,7 @@ function Home() {
         e.preventDefault();
     
         try {
-          const res = await fetch('http://127.0.0.1:5000/api/send-email', {
+          const res = await fetch('/api/send-email', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -91,14 +91,14 @@ function Home() {
             <NavBar/>
             <div id="header">
                     <div id="containeur-image">
-                        <img id="image1" src={`http://127.0.0.1:5000/image-accueil/image/1.png`} alt="" />
-                        <img id="image2" src={`http://127.0.0.1:5000/image-accueil/image/2.png`} alt="" />
-                        <img id="image3" src={`http://127.0.0.1:5000/image-accueil/image/3.png`} alt="" />
-                        <img id="image4" src={`http://127.0.0.1:5000/image-accueil/image/4.png`} alt="" />
-                        <img id="image5" src={`http://127.0.0.1:5000/image-accueil/image/5.png`} alt="" />
-                        <img id="image6" src={`http://127.0.0.1:5000/image-accueil/image/6.png`} alt="" />
-                        <img id="image7" src={`http://127.0.0.1:5000/image-accueil/image/7.png`} alt="" />
-                        <img id="image8" src={`http://127.0.0.1:5000/image-accueil/image/8.png`} alt="" />
+                        <img id="image1" src={`/api/image-accueil/image/1.png`} alt="" />
+                        <img id="image2" src={`/api/image-accueil/image/2.png`} alt="" />
+                        <img id="image3" src={`/api/image-accueil/image/3.png`} alt="" />
+                        <img id="image4" src={`/api/image-accueil/image/4.png`} alt="" />
+                        <img id="image5" src={`/api/image-accueil/image/5.png`} alt="" />
+                        <img id="image6" src={`/api/image-accueil/image/6.png`} alt="" />
+                        <img id="image7" src={`/api/image-accueil/image/7.png`} alt="" />
+                        <img id="image8" src={`/api/image-accueil/image/8.png`} alt="" />
                     </div>
                 <div id="info-header">
                     <h1>UQAC en Plein Air</h1>
