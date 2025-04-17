@@ -27,7 +27,7 @@ function Home() {
 
 
     useEffect(() => {
-    fetch("/api/activites")
+    fetch("/api/activites/")
         .then((res) => res.json())
         .then((data: Activity[]) => setActivities(data))
         .catch((error) => console.error("Erreur chargement activités :", error));
@@ -163,7 +163,7 @@ function Home() {
                 <div id="containeur-activites">
                     {activities.map((activity) => (
                         <div key={activity.id} className="activite">
-                            <img src={`http://127.0.0.1:5000${activity.image_path}`} alt={activity.title} />
+                            <img src={`/api${activity.image_path}`} alt={activity.title} />
                             <h2 className="titre-activite">{activity.title}</h2>
                             <p>{activity.description}</p>
                             <div className="footer-activite">
