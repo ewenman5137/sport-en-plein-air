@@ -6,7 +6,7 @@ from app.models.models import db
 routes_membres = Blueprint("routes_membres", __name__)
 
 # Dossier où les images sont stockées
-MEMBER_FOLDER = os.path.join(os.getcwd(), "app", "images", "membres")
+MEMBER_FOLDER = os.path.join(os.getcwd(), "images", "membres")
 
 
 # 📸 Route pour servir une image d’un membre
@@ -49,7 +49,8 @@ def create_member():
         return jsonify({"error": str(e)}), 400
 
 
-# ✅ PUT : Modifier un membre
+from ast import literal_eval  # plus sûr que eval()
+
 @routes_membres.route("/<int:member_id>", methods=["PUT"])
 def update_member(member_id):
     try:
@@ -58,8 +59,26 @@ def update_member(member_id):
         member.name = request.form.get("name", member.name)
         member.role = request.form.get("role", member.role)
         member.description = request.form.get("description", member.description)
-        member.social_links = request.form.get("social_links", member.social_links)
 
+        # 💥 Recréer les social_links
+        links_json = request.form.get("social_links", "[]")
+        links_data = literal_eval(links_json) if isinstance(links_json, str) else []
+
+        # Supprimer les anciens liens
+        from app.models.membre import SocialLink
+        for link in member.social_links:
+            db.session.delete(link)
+
+        # Ajouter les nouveaux liens
+        for link in links_data:
+            new_link = SocialLink(
+                member_id=member.id,
+                network_name=link["network_name"],
+                url=link["url"]
+            )
+            db.session.add(new_link)
+
+        # Gestion image
         image = request.files.get("image")
         if image:
             os.makedirs(MEMBER_FOLDER, exist_ok=True)
@@ -72,7 +91,10 @@ def update_member(member_id):
         return jsonify({"message": "Membre mis à jour avec succès"})
 
     except Exception as e:
+        print("Erreur update_member:", e)
         return jsonify({"error": str(e)}), 400
+
+
 
 
 # ✅ DELETE : Supprimer un membre

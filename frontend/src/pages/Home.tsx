@@ -5,15 +5,34 @@ import Footer from "../component/Footer";
 import { useEffect } from "react";
 import { useState } from 'react';
 
+
+interface Activity {
+    id: number;
+    image_path: string;
+    title: string;
+    description: string;
+    plan?: string;
+    date: string;
+}
+
   
 function Home() {  
-    
+    const [activities, setActivities] = useState<Activity[]>([]);    
     const [formData, setFormData] = useState({
         entreprise: '',
         email: '',
         objet: '',
         message: '',
       });
+
+
+    useEffect(() => {
+    fetch("http://127.0.0.1:5000/activites")
+        .then((res) => res.json())
+        .then((data: Activity[]) => setActivities(data))
+        .catch((error) => console.error("Erreur chargement activités :", error));
+}, []);
+    
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -71,16 +90,16 @@ function Home() {
         <div id="containeur-home">
             <NavBar/>
             <div id="header">
-                <div id="containeur-image">
-                    <img id="image1" src="/imageAccueil/1.png" alt="" />
-                    <img id="image2" src="/imageAccueil/2.png" alt="" />
-                    <img id="image3" src="/imageAccueil/3.png" alt="" />
-                    <img id="image4" src="/imageAccueil/4.png" alt="" />
-                    <img id="image5" src="/imageAccueil/5.png" alt="" />
-                    <img id="image6" src="/imageAccueil/6.png" alt="" />
-                    <img id="image7" src="/imageAccueil/7.png" alt="" />
-                    <img id="image8" src="/imageAccueil/8.png" alt="" />
-                </div>
+                    <div id="containeur-image">
+                        <img id="image1" src={`http://127.0.0.1:5000/image-accueil/image/1.png`} alt="" />
+                        <img id="image2" src={`http://127.0.0.1:5000/image-accueil/image/2.png`} alt="" />
+                        <img id="image3" src={`http://127.0.0.1:5000/image-accueil/image/3.png`} alt="" />
+                        <img id="image4" src={`http://127.0.0.1:5000/image-accueil/image/4.png`} alt="" />
+                        <img id="image5" src={`http://127.0.0.1:5000/image-accueil/image/5.png`} alt="" />
+                        <img id="image6" src={`http://127.0.0.1:5000/image-accueil/image/6.png`} alt="" />
+                        <img id="image7" src={`http://127.0.0.1:5000/image-accueil/image/7.png`} alt="" />
+                        <img id="image8" src={`http://127.0.0.1:5000/image-accueil/image/8.png`} alt="" />
+                    </div>
                 <div id="info-header">
                     <h1>UQAC en Plein Air</h1>
                     <p>Notre association a pour mission de faire découvrir le Saguenay, en mettant à l’honneur le Mont Valin, la Station Édouard et les nombreuses activités sportives à Chicoutimi.</p>
@@ -140,37 +159,21 @@ function Home() {
             </div>
             <div id="nos-activites">
                 <h1>Nos activités</h1>
-                <p>Notre association te propose une multitude d’activités en plein air pour découvrir le Saguenay autrement, <br />repousser tes limites et partager des moments inoubliables avec une  communauté passionnée.</p>
+                <p>Notre association te propose une multitude d’activités en plein air...</p>
                 <div id="containeur-activites">
-                    <div className="activite">
-                        <img src="/activite1.png" alt="" />
-                        <h2 className="titre-activite">Ski au mont-valin</h2>
-                        <p>Viens profiter d’une journée inoubliable sur les pistes du Mont Valin ! Entre descentes enneigées, panoramas à couper le souffle et ambiance conviviale, cette sortie est l’occasion parfaite de glisser, s’amuser et se dépasser.</p>
-                        <div className="footer-activite">
-                            <p className="date-activite">May 20th 2020</p>
-                            <a href="/activites/1">En savoir +</a>
+                    {activities.map((activity) => (
+                        <div key={activity.id} className="activite">
+                            <img src={`http://127.0.0.1:5000${activity.image_path}`} alt={activity.title} />
+                            <h2 className="titre-activite">{activity.title}</h2>
+                            <p>{activity.description}</p>
+                            <div className="footer-activite">
+                                <p className="date-activite">{new Date(activity.date).toLocaleDateString()}</p>
+                                <a href={`/activites/${activity.id}`}>En savoir +</a>
+                            </div>
                         </div>
-                    </div>
-                    <div className="activite">
-                        <img src="/activite2.png" alt="" />
-                        <h2 className="titre-activite">Escalade de glace</h2>
-                        <p>Viens repousser tes limites et découvrir les sensations uniques de l’escalade de glace sur les parois gelées du Saguenay ! Encadré par des passionnés, tu apprendras à manier piolets et crampons pour grimper en toute sécurité.</p>
-                        <div className="footer-activite">
-                            <p className="date-activite">May 20th 2020</p>
-                            <a href="">En savoir +</a>
-                        </div>
-                    </div>
-                    <div className="activite">
-                        <img src="/activite3.png" alt="" />
-                        <h2 className="titre-activite">Ski au mont-francis</h2>
-                        <p>La montagne Mont-Francis, beau et gentil au premier abord, peut vous proposer des pistes à la fois ludiques et techniques, parfaites pour y passer une journée après une semaine de cours.</p>
-                        <div className="footer-activite">
-                            <p className="date-activite">May 20th 2020</p>
-                            <a href="">En savoir +</a>
-                        </div>
-                    </div>
+                    ))}
                 </div>
-                <a  href="/nos-activites">Voir toutes nos activités</a>
+                <a href="/nos-activites">Voir toutes nos activités</a>
             </div>
             <div id="qui-sommes-nous" className="animated">
                 <div id="info-qui-sommes-nous">

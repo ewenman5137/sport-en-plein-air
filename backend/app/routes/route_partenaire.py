@@ -1,8 +1,19 @@
-from flask import Blueprint, jsonify
+import os
+from flask import Blueprint, request, jsonify, send_from_directory, current_app
 from app.models.models import db
 from app.models.partenaire import Partenaire
 
+from app.models.partenaire import Partenaire
+
 partenaire_bp = Blueprint("partenaire_bp", __name__)
+
+MEMBER_FOLDER = os.path.join(os.getcwd(), "images", "partenaires")
+
+
+# 📸 Route pour servir une image d’un membre
+@partenaire_bp.route("/image/<filename>")
+def serve_member_image(filename):
+    return send_from_directory(MEMBER_FOLDER, filename)
 
 @partenaire_bp.route("/", methods=["GET"])
 def get_partenaires():

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
-import "../assets/panel.css";
 import { useNavigate } from "react-router-dom";
+import "../assets/panel.css";
 
 
 
@@ -28,6 +28,9 @@ function Panel() {
                     </a>
                     <a href="/admin-equipe" className={location.pathname === "/admin-equipe" ? "active" : ""}>
                         <img src="/panel/equipe.svg" alt="" /><p>Equipe</p><img src="/panel/liens.svg" alt="" />
+                    </a>
+                    <a href="/admin-image-accueil" className={location.pathname === "/admin-image-accueil" ? "active" : ""}>
+                        <img src="/panel/equipe.svg" alt="" /><p>image accueil</p><img src="/panel/liens.svg" alt="" />
                     </a>
                 </div>
                 <button onClick={handleLogout} id="deconnexion">

@@ -1,12 +1,19 @@
-from flask import Blueprint, request, jsonify, session
+from flask import Blueprint, request, jsonify, send_from_directory, current_app
 from app.models.models import db, Activity
 from datetime import datetime
 import os
-from flask import current_app
 
 routes_activites = Blueprint('routes_activites', __name__)
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))  # Racine projet
-PUBLIC_FOLDER = os.path.join(PROJECT_ROOT, "frontend", "public", "activites")
+
+
+# Dossier où les images sont stockées
+MEMBER_FOLDER = os.path.join(os.getcwd(), "images", "activites")
+
+
+# 📸 Route pour servir une image d’un membre
+@routes_activites.route("/image/<filename>")
+def serve_member_image(filename):
+    return send_from_directory(MEMBER_FOLDER, filename)
 
 
 @routes_activites.route('/', methods=['GET'])
@@ -39,38 +46,33 @@ def get_activity(activity_id):
     return jsonify(activity_data)
 
 
-# ✅ Mettre à jour une activité
 @routes_activites.route('/<int:activity_id>', methods=['PUT'])
 def update_activity(activity_id):
     try:
         activity = Activity.query.get_or_404(activity_id)
-
-        # Champs textes
         activity.title = request.form.get('title', activity.title)
         activity.description = request.form.get('description', activity.description)
         activity.plan = request.form.get('plan', activity.plan)
+
         if request.form.get('date'):
             activity.date = datetime.fromisoformat(request.form.get('date')).date()
 
-        # Image si modifiée
         image = request.files.get('image')
         if image:
+            os.makedirs(MEMBER_FOLDER, exist_ok=True)
             filename = f"{activity.id}.png"
-            image_folder = os.path.join(current_app.root_path, "public", "activites")
-            os.makedirs(image_folder, exist_ok=True)
-            image_path = os.path.join(image_folder, filename)
+            image_path = os.path.join(MEMBER_FOLDER, filename)
             image.save(image_path)
-            activity.image_path = f"/public/activites/{filename}"
+            activity.image_path = f"/activites/image/{filename}"
 
         db.session.commit()
         return jsonify({'message': 'Activité mise à jour avec succès !'})
 
     except Exception as e:
+        print("Erreur update_activity:", e)
         return jsonify({'error': str(e)}), 400
 
 
-
-# ✅ Supprimer une activité
 @routes_activites.route('/<int:activity_id>', methods=['DELETE'])
 def delete_activity(activity_id):
     activity = Activity.query.get_or_404(activity_id)
@@ -80,6 +82,7 @@ def delete_activity(activity_id):
         return jsonify({'message': 'Activité supprimée avec succès !'})
     except Exception as e:
         return jsonify({'error': str(e)}), 400
+
 
 @routes_activites.route('/', methods=['POST'])
 def create_activity():
@@ -102,23 +105,15 @@ def create_activity():
         db.session.commit()
 
         if image:
+            os.makedirs(MEMBER_FOLDER, exist_ok=True)
             filename = f"{new_activity.id}.png"
-
-            # ✅ Création du vrai chemin vers frontend/public/activites
-            PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
-            PUBLIC_FOLDER = os.path.join(PROJECT_ROOT, "frontend", "public", "activites")
-
-            os.makedirs(PUBLIC_FOLDER, exist_ok=True)
-
-            image_path = os.path.join(PUBLIC_FOLDER, filename)
+            image_path = os.path.join(MEMBER_FOLDER, filename)
             image.save(image_path)
-
-            # Pour que React puisse y accéder
-            new_activity.image_path = f"/activites/{filename}"
+            new_activity.image_path = f"/activites/image/{filename}"
             db.session.commit()
 
         return jsonify({'message': 'Activité créée avec succès !'}), 201
 
     except Exception as e:
+        print("Erreur create_activity:", e)
         return jsonify({'error': str(e)}), 400
-

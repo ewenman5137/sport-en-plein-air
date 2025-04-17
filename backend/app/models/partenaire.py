@@ -15,9 +15,9 @@ class Partenaire(db.Model):
     def insert_default_content():
         """ Ajoute des names par défaut si la table est vide """
         partenaire_data = [
-            {"image_path": "/partenaires/decathlon.png", "name": "Decathlon", "liens": "https://decathlon.com"},
-            {"image_path": "/partenaires/uqac.png", "name": "Uqac", "liens": "https://uqac.com"},
-            {"image_path": "/partenaires/sportsExperts.png", "name": "sports Experts", "liens": "https://sportsExperts.com"}
+            {"image_path": "/partenaires/image/decathlon.png", "name": "Decathlon", "liens": "https://decathlon.com"},
+            {"image_path": "/partenaires/image/uqac.png", "name": "Uqac", "liens": "https://uqac.com"},
+            {"image_path": "/partenaires/image/sportsExperts.png", "name": "sports Experts", "liens": "https://sportsExperts.com"}
         ]
 
         if not Partenaire.query.first():  # Vérifie si la table est vide

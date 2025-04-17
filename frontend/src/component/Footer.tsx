@@ -8,7 +8,7 @@ function Footer() {
         <div id="footer">
             <div id="politique-mentions">
                 <a href="">Politique de confidentialité</a>
-                <a href="">Mention légals</a>
+                <a href="">Mentions légales</a>
             </div>
             <div className="bar-de-separation"></div>
             <div id="reseaux">
