@@ -23,7 +23,7 @@ function AdminImageAccueil() {
     }, []);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5000/image-accueil")
+        fetch("/api/image-accueil")
             .then((res) => res.json())
             .then((data: ImageAccueil[]) => setImages(data))
             .catch(console.error);
@@ -43,13 +43,13 @@ function AdminImageAccueil() {
         formData.append("image", file);
 
         try {
-            await fetch(`http://127.0.0.1:5000/image-accueil/${selectedImageId}`, {
+            await fetch(`/api/image-accueil/${selectedImageId}`, {
                 method: "PUT",
                 body: formData,
             });
 
             // recharge les images
-            const updated = await fetch("http://127.0.0.1:5000/image-accueil");
+            const updated = await fetch("/api/image-accueil");
             const data = await updated.json();
             setImages(data);
             setFile(null);

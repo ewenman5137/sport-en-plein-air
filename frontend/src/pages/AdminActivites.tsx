@@ -28,14 +28,14 @@ function AdminActivites() {
     }, []);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5000/activites")
+        fetch("/api/activites")
             .then((response) => response.json())
             .then((data: Activity[]) => setActivities(data))
             .catch((error) => console.error("Erreur lors de la récupération des activités:", error));
     }, []);
 
     const handleDelete = (id: number) => {
-        fetch(`http://127.0.0.1:5000/activites/${id}`, { method: "DELETE" })
+        fetch(`/api/activites/${id}`, { method: "DELETE" })
             .then(() => setActivities(activities.filter(activity => activity.id !== id)))
             .catch(error => console.error("Erreur lors de la suppression de l'activité:", error));
     };
@@ -80,7 +80,7 @@ function AdminActivites() {
             if (isEditing && formData.id) {
                 imageName = `${formData.id}.png`;
             } else {
-                const res = await fetch("http://127.0.0.1:5000/activites");
+                const res = await fetch("/api/activites");
                 const list = await res.json();
                 const lastId = Math.max(...list.map((a: Activity) => a.id), 0);
                 imageName = `${lastId + 1}.png`;
@@ -89,8 +89,8 @@ function AdminActivites() {
         }
 
         const url = isEditing
-            ? `http://127.0.0.1:5000/activites/${formData.id}`
-            : "http://127.0.0.1:5000/activites";
+            ? `/api/activites/${formData.id}`
+            : "/api/activites";
 
         const method = isEditing ? "PUT" : "POST";
 

@@ -32,7 +32,7 @@ function AdminEquipe() {
     }, []);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5000/membres")
+        fetch("/api/membres")
             .then((res) => res.json())
             .then((data: Member[]) => setMembers(data))
             .catch(console.error);
@@ -53,7 +53,7 @@ function AdminEquipe() {
     };
 
     const handleDelete = (id: number) => {
-        fetch(`http://127.0.0.1:5000/membres/${id}`, { method: "DELETE" })
+        fetch(`/api/membres/${id}`, { method: "DELETE" })
             .then(() => setMembers(members.filter((m) => m.id !== id)))
             .catch(console.error);
     };
@@ -103,8 +103,8 @@ function AdminEquipe() {
         }
 
         const url = isEditing
-            ? `http://127.0.0.1:5000/membres/${formData.id}`
-            : "http://127.0.0.1:5000/membres";
+            ? `/api/membres/${formData.id}`
+            : "/api/membres";
         const method = isEditing ? "PUT" : "POST";
 
         try {

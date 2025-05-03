@@ -16,7 +16,7 @@ function NotreEquipe() {
     const [members, setMembers] = useState<Member[]>([]);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5000/membres")  // Assurez-vous que l'URL correspond à votre backend
+        fetch("/api/membres")  // Assurez-vous que l'URL correspond à votre backend
             .then((response) => response.json())
             .then((data: Member[]) => setMembers(data))
             .catch((error) => console.error("Erreur lors de la récupération des membres:", error));
