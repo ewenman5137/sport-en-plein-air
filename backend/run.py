@@ -40,13 +40,13 @@ app.config.from_object('config')  # Assure-toi que config.py existe avec tes par
 db.init_app(app)
 
 # Enregistrement des routes (blueprints)
-app.register_blueprint(base, url_prefix="")
-app.register_blueprint(routes_membres, url_prefix="/membres")
-app.register_blueprint(routes_activites, url_prefix="/activites")
-app.register_blueprint(auth_bp, url_prefix="/auth")
-app.register_blueprint(partenaire_bp, url_prefix="/partenaires")
-app.register_blueprint(route_image_accueil, url_prefix="/image-accueil")
-app.register_blueprint(contact_bp, url_prefix="")
+app.register_blueprint(base, url_prefix="/api")
+app.register_blueprint(routes_membres, url_prefix="/api/membres")
+app.register_blueprint(routes_activites, url_prefix="/api/activites")
+app.register_blueprint(auth_bp, url_prefix="/api/auth")
+app.register_blueprint(partenaire_bp, url_prefix="/api/partenaires")
+app.register_blueprint(route_image_accueil, url_prefix="/api/image-accueil")
+app.register_blueprint(contact_bp, url_prefix="/api")
 
 # Initialisation de la base de données
 with app.app_context():
