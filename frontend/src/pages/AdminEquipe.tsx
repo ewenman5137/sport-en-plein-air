@@ -32,7 +32,7 @@ function AdminEquipe() {
     }, []);
 
     useEffect(() => {
-        fetch("/api/membres")
+        fetch("/api/membres/")
             .then((res) => res.json())
             .then((data: Member[]) => setMembers(data))
             .catch(console.error);

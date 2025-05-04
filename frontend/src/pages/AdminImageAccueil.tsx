@@ -23,7 +23,7 @@ function AdminImageAccueil() {
     }, []);
 
     useEffect(() => {
-        fetch("/api/image-accueil")
+        fetch("/api/image-accueil/")
             .then((res) => res.json())
             .then((data: ImageAccueil[]) => setImages(data))
             .catch(console.error);

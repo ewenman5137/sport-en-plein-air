@@ -28,7 +28,7 @@ function AdminActivites() {
     }, []);
 
     useEffect(() => {
-        fetch("/api/activites")
+        fetch("/api/activites/")
             .then((response) => response.json())
             .then((data: Activity[]) => setActivities(data))
             .catch((error) => console.error("Erreur lors de la récupération des activités:", error));
