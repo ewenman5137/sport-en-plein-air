@@ -122,7 +122,7 @@ function AdminActivites() {
                             <div key={activity.id} className="activite">
                                 <button className="delete-btn" onClick={() => handleDelete(activity.id)}>🗑</button>
                                 <button className="edit-btn" onClick={() => openEditModal(activity)}>✏️</button>
-                                <img src={`http://127.0.0.1:5000${activity.image_path}`} alt={activity.title} />
+                                <img src={`/api${activity.image_path}`} alt={activity.title} />
                                 <h1>{activity.title}</h1>
                                 <p>{activity.description}</p>
                                 <div className="containeur-date">

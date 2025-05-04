@@ -52,7 +52,7 @@ function AdminPartenaire() {
 
                                     {/* ✅ Correction pour éviter src="" */}
                                     {partenaire.image_path ? (
-                                        <img src={`http://127.0.0.1:5000${partenaire.image_path}`} alt={partenaire.name} />
+                                        <img src={`/api${partenaire.image_path}`} alt={partenaire.name} />
                                     ) : (
                                         <img src="default-image.png" alt="Image par défaut" />
                                     )}

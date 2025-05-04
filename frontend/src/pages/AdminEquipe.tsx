@@ -132,7 +132,7 @@ function AdminEquipe() {
                                 <div key={member.id} className="membre">
                                     <button className="delete-btn" onClick={() => handleDelete(member.id)}>🗑</button>
                                     <button className="edit-btn" onClick={() => openEditModal(member)}>✏️</button>
-                                    <img src={`http://127.0.0.1:5000${member.image_path}`} alt={member.name} />
+                                    <img src={`/api${member.image_path}`} alt={member.name} />
                                     <h1>{member.name}</h1>
                                     <p className="fonction">{member.role}</p>
                                     <p className="description">{member.description}</p>

@@ -68,7 +68,7 @@ function AdminImageAccueil() {
                     {images.map((img) => (
                         <div className="card-image" key={img.id}>
                             <img
-                                src={`http://127.0.0.1:5000${img.image_path}`}
+                                src={`/api${img.image_path}`}
                                 alt={`Image ${img.id}`}
                                 className="preview-image"
                             />
