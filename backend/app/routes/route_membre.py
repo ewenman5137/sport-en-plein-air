@@ -117,7 +117,7 @@ def delete_member(member_id):
 
 
 # ✅ GET : Récupérer tous les membres
-@routes_membres.route("", methods=["GET"])
+@routes_membres.route("/", methods=["GET"])
 def get_all_members():
     try:
         membres = Member.query.all()
