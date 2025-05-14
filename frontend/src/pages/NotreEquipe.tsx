@@ -33,17 +33,10 @@ function NotreEquipe() {
                         {members.length > 0 ? (
                             members.map((member) => (
                                 <div key={member.id} className="equipe">
-                                    <img src={member.image_path} alt={member.name} />
+                                    <img src={`/api${member.image_path}`} alt={member.name} />
                                     <p className="nom">{member.name}</p>
                                     <p className="fonction">{member.role}</p>
                                     <p className="description">{member.description}</p>
-                                    <div className="containeur-reseaux">
-                                        {member.social_links.map((link, index) => (
-                                            <a key={index} href={link.url} target="_blank" rel="noopener noreferrer">
-                                                <div className="reseau">{link.network_name}</div>
-                                            </a>
-                                        ))}
-                                    </div>
                                 </div>
                             ))
                         ) : (

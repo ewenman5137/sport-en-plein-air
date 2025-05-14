@@ -100,6 +100,21 @@
 }
 
 @media (max-width: 900px) {
+    #nos-activites {
+        padding: 5%;
+    }
+
+    #containeur-activites {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .activite {
+        width: 90%;
+        padding: 0;
+        background-color: white; /* ou blue si voulu */
+    }
+
     #nous-contacter {
         flex-direction: column;
         gap: 30px;
@@ -114,7 +129,11 @@
         font-size: 25px;
         padding: 60px 20px;
     }
+    #button-footer{
+        margin-bottom: 5vh;
+    }
 }
+
 
 
 

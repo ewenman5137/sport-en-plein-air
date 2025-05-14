@@ -14,10 +14,18 @@ interface Activity {
     plan?: string;
     date: string;
 }
+interface Partenaire {
+    id: number;
+    image_path: string;
+    name: string;
+    link?: string; // si tu veux gérer un lien vers le site du partenaire
+}
+
 
   
 function Home() {  
     const [activities, setActivities] = useState<Activity[]>([]);    
+    const [partenaires, setPartenaires] = useState<Partenaire[]>([]);
     const [formData, setFormData] = useState({
         entreprise: '',
         email: '',
@@ -31,8 +39,21 @@ function Home() {
         .then((res) => res.json())
         .then((data: Activity[]) => setActivities(data))
         .catch((error) => console.error("Erreur chargement activités :", error));
-}, []);
+    }, []); 
     
+    useEffect(() => {
+        fetch("/api/partenaires/")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Erreur lors de la récupération des partenaires");
+                }
+                return response.json();
+            })
+            .then((data: Partenaire[]) => {
+                setPartenaires(data);
+            })
+            .catch((error) => console.error(error));
+    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -192,12 +213,16 @@ function Home() {
             <div id="nos-partenaires" className="animated">
                 <h1>Ils nous font confiance</h1>
                 <div id="containeur-entreprise">
-                    <img src="/entreprise/decathlon.png" alt="" />
-                    <img src="/entreprise/sportsExperts.png" alt="" />
-                    <img src="/entreprise/uqac.png" alt="" />
-                    <img src="/entreprise/decathlon.png" alt="" />
-                    <img src="/entreprise/sportsExperts.png" alt="" />
-                    <img src="/entreprise/uqac.png" alt="" />
+                    {partenaires.map((partenaire) => (
+                        <a
+                            key={partenaire.id}
+                            href={partenaire.link || "#"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img src={`/api${partenaire.image_path}`} alt={partenaire.name} />
+                        </a>
+                    ))}
                 </div>
             </div>
             <div id="nous-contacter" className="animated">
@@ -254,7 +279,7 @@ function Home() {
                         />
                     </div>
 
-                    <button type="submit">Envoyer</button>
+                    <button id="button-footer" type="submit">Envoyer</button>
                     </form>
                 </div>
             </div>
