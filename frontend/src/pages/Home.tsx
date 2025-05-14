@@ -109,7 +109,7 @@ function Home() {
                         <img src="/montagne.png" alt="" />
                     </div>
                     <div className="bar-separation"></div>
-                    <a href="#contact">Avez-vous des questions ?<br />Contactez-nous !</a>
+                    <a href="#nous-contacter">Avez-vous des questions ?<br />Contactez-nous !</a>
                 </div>
             </div>
             <div id="notre-equipe" className="animated">
@@ -168,7 +168,6 @@ function Home() {
                             <p>{activity.description}</p>
                             <div className="footer-activite">
                                 <p className="date-activite">{new Date(activity.date).toLocaleDateString()}</p>
-                                <a href={`/activites/${activity.id}`}>En savoir +</a>
                             </div>
                         </div>
                     ))}
@@ -207,9 +206,9 @@ function Home() {
                     <p>N’hésite pas à nous contacter ! Que ce soit pour en savoir plus sur nos activités, proposer une collaboration ou rejoindre l’aventure, nous serons ravis de te répondre. Remplis le formulaire ci-dessous et nous reviendrons vers toi dès que possible.</p>
                     <p id="titre-containeur-reseaux-home">Réseaux sociaux</p>
                     <div className="containeur-reseaux-home">
-                        <a href="" target="_blank"><img src="/reseaux/insta_black.png" alt="" /></a>
-                        <a href="" target="_blank"><img id="facebook_black" src="/reseaux/facebook.svg" alt="" /></a>
-                        <a href="" target="_blank"><img src="/reseaux/mail_black.png" alt="" /></a>
+                        <a href="https://www.instagram.com/sport.plein.air.uqac/" target="_blank"><img src="/reseaux/insta_black.png" alt="" /></a>
+                        <a href="https://www.facebook.com/profile.php?id=61569110162993" target="_blank"><img id="facebook_black" src="/reseaux/facebook.svg" alt="" /></a>
+                        <a href="mailto:sportpleinair.uqac@outlook.com" target="_blank"><img src="/reseaux/mail_black.png" alt="" /></a>
                     </div>
                 </div>
                 <form id="form-nous-contacter" onSubmit={handleSubmit}>

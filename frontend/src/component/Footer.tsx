@@ -12,11 +12,11 @@ function Footer() {
             </div>
             <div className="bar-de-separation"></div>
             <div id="reseaux">
-                <p>© Design & developpe by Johanne VIGOUROUX, Ewen BUHOT</p>
+                <p>Conception et développement : Johanne Vigouroux & Ewen Buhot</p>
                 <div className="containeur-reseaux">
-                    <a href="" className="reseau"><img  src="/reseaux/insta_white.png" alt="" /></a>
-                    <a href="" className="reseau"><img id="facebook" src="/reseaux/facebook_white.svg" alt="" /></a>
-                    <a href="" className="reseau"><img  src="/reseaux/mail_white.png" alt="" /></a>
+                    <a href="https://www.instagram.com/sport.plein.air.uqac/" className="reseau"><img  src="/reseaux/insta_white.png" alt="" /></a>
+                    <a href="https://www.facebook.com/profile.php?id=61569110162993" className="reseau"><img id="facebook" src="/reseaux/facebook_white.svg" alt="" /></a>
+                    <a href="mailto:sportpleinair.uqac@outlook.com" className="reseau"><img  src="/reseaux/mail_white.png" alt="" /></a>
                 </div>
             </div>
         </div>

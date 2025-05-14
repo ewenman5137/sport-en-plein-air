@@ -17,7 +17,8 @@ function Activites() {
     const [activities, setActivities] = useState<Activity[]>([]);
 
     useEffect(() => {
-        fetch("/api/activites")  // Assurez-vous que l'URL correspond à votre backend
+        console.log("/api/activites/")
+        fetch("/api/activites/")  // Assurez-vous que l'URL correspond à votre backend
             .then((response) => response.json())
             .then((data: Activity[]) => setActivities(data))
     }, []);
@@ -36,7 +37,6 @@ function Activites() {
                                     <img src={activity.image_path} alt={activity.title} />
                                     <h2 className="titre-activite">{activity.title}</h2>
                                     <p>{activity.description}</p>
-                                    <div className="footer-activite"><p className="date-activite"><strong>Date:</strong> {new Date(activity.date).toLocaleDateString()}</p><a href={`/activites/${activity.id}`}>En savoir +</a></div>
                                 </div>
                             ))
                         ) : (

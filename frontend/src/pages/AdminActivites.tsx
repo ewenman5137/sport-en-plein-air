@@ -127,7 +127,6 @@ function AdminActivites() {
                                 <p>{activity.description}</p>
                                 <div className="containeur-date">
                                     <p>{new Date(activity.date).toLocaleDateString()}</p>
-                                    <a href={`/activite/${activity.id}`}>En savoir +</a>
                                 </div>
                             </div>
                         ))}
@@ -141,7 +140,7 @@ function AdminActivites() {
                     <div className="modal-content">
                         <h2>{isEditing ? "Modifier" : "Créer"} une activité</h2>
                         <input type="text" name="title" placeholder="Titre" value={formData.title || ''} onChange={handleChange} />
-                        <textarea name="description" placeholder="Description" value={formData.description || ''} onChange={handleChange} />
+                        <textarea name="description" placeholder="Description" value={formData.description || ''} onChange={handleChange} maxLength={500} />
                         <input type="date" name="date" value={formData.date?.slice(0, 10) || ''} onChange={handleChange} />
                         <input type="file" accept="image/*" onChange={handleImageChange} />
                         <button onClick={handleSubmit}>{isEditing ? "Mettre à jour" : "Créer"}</button>
