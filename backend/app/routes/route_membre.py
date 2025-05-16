@@ -16,6 +16,9 @@ def serve_member_image(filename):
 
 
 # ✅ POST : Créer un membre
+from ast import literal_eval
+from app.models.membre import SocialLink
+
 @routes_membres.route("/", methods=["POST"])
 def create_member():
     try:
@@ -23,30 +26,54 @@ def create_member():
         name = request.form.get("name")
         role = request.form.get("role")
         description = request.form.get("description", "")
-        social_links = request.form.get("social_links", "[]")
+        social_links_raw = request.form.get("social_links", "[]")
 
+        print("🎯 Social_links brut:", social_links_raw)
+
+        if not name or not role:
+            return jsonify({"error": "Le nom et le rôle sont requis"}), 400
+
+        # Étape 1 : créer le membre sans lien
         new_member = Member(
             image_path="",
             name=name,
             role=role,
             description=description,
-            social_links=social_links,
+            social_links=[],  # 🔧 vide au départ
         )
         db.session.add(new_member)
         db.session.commit()
 
+        # Étape 2 : traiter les réseaux sociaux
+        try:
+            links_data = literal_eval(social_links_raw)
+            for link in links_data:
+                social_link = SocialLink(
+                    member_id=new_member.id,
+                    network_name=link.get("network_name", ""),
+                    url=link.get("url", "")
+                )
+                db.session.add(social_link)
+        except Exception as e:
+            print("⚠️ Erreur parsing social_links:", e)
+
+        # Étape 3 : gérer l'image
         if image:
             os.makedirs(MEMBER_FOLDER, exist_ok=True)
             filename = f"{new_member.id}.png"
             image_path = os.path.join(MEMBER_FOLDER, filename)
             image.save(image_path)
             new_member.image_path = f"/membres/image/{filename}"
-            db.session.commit()
 
+        db.session.commit()
         return jsonify({"message": "Membre ajouté avec succès"}), 201
 
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         return jsonify({"error": str(e)}), 400
+
+
 
 
 from ast import literal_eval  # plus sûr que eval()

@@ -6,6 +6,7 @@ import AdminActivites from './pages/AdminActivites';
 import AdminEquipe from './pages/AdminEquipe';
 import AdminPartenaire from './pages/AdminPartenaire';
 import AdminImageAccueil from './pages/AdminImageAccueil';
+import AdminTextAccueil from './pages/AdminTextAccueil';
 import Login from './pages/Login';
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/admin-equipe" element={<AdminEquipe/>} />
         <Route path="/admin-partenaire" element={<AdminPartenaire/>} />
         <Route path="/admin-image-accueil" element={<AdminImageAccueil/>} />
+        <Route path="/admin-text-accueil" element={<AdminTextAccueil/>} />
         <Route path="/login" element={<Login/>} />
       </Routes>
     </BrowserRouter>

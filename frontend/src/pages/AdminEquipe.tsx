@@ -104,7 +104,7 @@ function AdminEquipe() {
 
         const url = isEditing
             ? `/api/membres/${formData.id}`
-            : "/api/membres";
+            : "/api/membres/";
         const method = isEditing ? "PUT" : "POST";
 
         try {

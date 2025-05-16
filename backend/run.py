@@ -6,11 +6,13 @@ from app.models.membre import SocialLink
 from app.models.activite import Activity
 from app.models.partenaire import Partenaire
 from app.models.imageAccueil import ImageAccueil
+from app.models.textAccueil import TextAccueil
 from app.routes.route_membre import routes_membres
 from app.routes.route_activite import routes_activites
 from app.routes.route_partenaire import partenaire_bp
 from app.routes.route_auth import auth_bp
 from app.routes.route_image_accueil import route_image_accueil
+from app.routes.route_text import text_accueil
 from flask_mail import Mail
 from app.routes.contact import contact_bp, mail
 from app.routes import base
@@ -46,7 +48,7 @@ app.register_blueprint(routes_activites, url_prefix="/api/activites")
 app.register_blueprint(auth_bp, url_prefix="/api/auth")
 app.register_blueprint(partenaire_bp, url_prefix="/api/partenaires")
 app.register_blueprint(route_image_accueil, url_prefix="/api/image-accueil")
-app.register_blueprint(contact_bp, url_prefix="/api")
+app.register_blueprint(text_accueil, url_prefix="/api/text_accueil")
 
 # Initialisation de la base de données
 with app.app_context():
@@ -56,6 +58,7 @@ with app.app_context():
     SocialLink.insert_default_content()
     Partenaire.insert_default_content()
     ImageAccueil.insert_default_content()
+    TextAccueil.insert_default_content()
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=True)

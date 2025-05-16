@@ -1,0 +1,74 @@
+{
+    "header": {
+        "buttons": {
+            "activities": "Nos activités",
+            "contact": "Avez-vous des questions ? Contactez-nous !",
+            "instagram": "Notre Instagram"
+        },
+        "description": "Notre association a pour mission de faire découvrir le Saguenay, en mettant à l’honneur le Mont Valin, la Station Édouard et les nombreuses activités sportives à Chicoutimi.",
+        "title": "UQAC en Plein Air"
+    },
+    "nosActivites": {
+        "button": "Voir toutes nos activités",
+        "description": "Notre association te propose une multitude d’activités en plein air...",
+        "title": "Nos activités"
+    },
+    "nosPartenaires": {
+        "title": "Ils nous font confiance"
+    },
+    "nosValeurs": {
+        "description": "Notre association fonctionne sans but lucratif : chaque dollar récolté est entièrement réinvesti dans le projet pour offrir aux étudiants des expériences. Créée par des étudiants, pour des étudiants, elle a pour objectif de rendre l’aventure accessible à tous.",
+        "title": "Nos valeurs",
+        "valeurs": [
+            {
+                "numero": "1",
+                "text": "Le Saguenay est bien plus qu’une région : c’est un terrain de jeu grandeur nature pour tous les passionnés d’aventure. Notre association s’engage à faire découvrir ses paysages spectaculaires, ses sentiers méconnus et ses sites naturels d’exception. Que ce soit à travers des randonnées, des sorties en raquettes ou des excursions en canot, nous voulons ouvrir les portes de la nature à tous ceux qui cherchent à s’évader et à repousser leurs limites.",
+                "title": "Découverte du Saguenay : Un Terrain d’Aventure Sans Limites"
+            },
+            {
+                "numero": "2",
+                "text": "Le Mont Valin et la Station Édouard sont des joyaux du Saguenay que nous avons à cœur de promouvoir. Véritables paradis pour les amateurs de glisse, ces lieux offrent des pistes de ski, des sentiers de raquettes et des panoramas à couper le souffle. Notre mission est de faire connaître ces sites incontournables à travers des sorties, des événements et des activités qui rassemblent les amoureux de la montagne. Que tu sois un skieur aguerri ou un aventurier en quête de nouveaux défis, ces sommets n’attendent que toi pour révéler toute leur magie.",
+                "title": "Des Sommets à Explorer"
+            },
+            {
+                "numero": "3",
+                "text": "Chicoutimi est un carrefour d’activités sportives et un point de départ idéal pour les amateurs de plein air. Au-delà des montagnes et des sentiers, notre association met en avant la diversité des sports et des aventures accessibles en ville et aux alentours. Vélo, escalade, kayak, trail... il y a mille et une façons de se dépasser tout en profitant de la nature. Nous voulons créer une communauté dynamique, où chacun trouve sa place et découvre de nouvelles passions.",
+                "title": "Sport et Aventure à Chicoutimi"
+            }
+        ]
+    },
+    "notreEquipe": {
+        "button": "En savoir +",
+        "description": "Notre association a pour mission de faire découvrir le Saguenay, en mettant à l’honneur le Mont Valin, la Station Édouard et les nombreuses activités sportives à Chicoutimi. Passionnés de plein air, nous voulons rendre l’aventure accessible à tous, à travers la randonnée, le ski, le camping et bien plus encore. Ici, chacun peut se dépasser, explorer et partager des moments uniques dans une nature grandiose. Rejoins-nous pour vivre des expériences inoubliables et repousser tes limites ! 🌲🏕⛷🚴‍♂️",
+        "sectionTitle": "QUI SOMMES NOUS ?",
+        "title": "Notre équipe"
+    },
+    "nousContacter": {
+        "description": "N’hésite pas à nous contacter ! Que ce soit pour en savoir plus sur nos activités, proposer une collaboration ou rejoindre l’aventure, nous serons ravis de te répondre. Remplis le formulaire ci-dessous et nous reviendrons vers toi dès que possible.",
+        "form": {
+            "email": "Email",
+            "entreprise": "Nom de l'entreprise",
+            "message": "Message",
+            "objet": "Objet",
+            "objetOptions": [
+                "Veuillez sélectionner un objet.",
+                "Demande de partenariat pour des activités de plein air",
+                "Candidature spontanée pour un poste dans les sports de plein air",
+                "Proposition de collaboration pour des événements outdoor",
+                "Demande d’informations sur vos services et équipements sportifs",
+                "Proposition de test et de promotion de vos produits outdoor"
+            ],
+            "submit": "Envoyer"
+        },
+        "reseaux": "Réseaux sociaux",
+        "title": "Nous contacter"
+    },
+    "quiSommesNous": {
+        "description": "Notre association, créée par des étudiants et pour des étudiants, a pour mission de faire découvrir le Saguenay, de promouvoir les activités en plein air et de rassembler une communauté autour de l’aventure et du dépassement de soi. À travers des sorties, des événements et des initiations sportives, nous mettons tout en œuvre pour rendre la nature et le sport accessibles à tous, sans but lucratif. Mais plutôt que de longs discours, nous vous invitons à découvrir notre univers à travers cette vidéo 🎥. Apprenez-en plus sur notre projet, nos valeurs et comment nous pouvons collaborer ensemble pour faire grandir cette belle aventure. 👉 Regardez la vidéo et rejoignez-nous dans cette aventure !",
+        "sectionTitle": "QUI SOMMES-NOUS ?",
+        "title": "Tout comprendre sur l'asso"
+    },
+    "transition": {
+        "title": "Pourquoi ne pas nous rejoindre ?"
+    }
+}

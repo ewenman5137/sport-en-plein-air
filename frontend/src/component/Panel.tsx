@@ -32,6 +32,9 @@ function Panel() {
                     <a href="/admin-image-accueil" className={location.pathname === "/admin-image-accueil" ? "active" : ""}>
                         <img src="/panel/equipe.svg" alt="" /><p>image accueil</p><img src="/panel/liens.svg" alt="" />
                     </a>
+                    <a href="/admin-text-accueil" className={location.pathname === "/admin-text-accueil" ? "active" : ""}>
+                        <img src="/panel/equipe.svg" alt="" /><p>text accueil</p><img src="/panel/liens.svg" alt="" />
+                    </a>
                 </div>
                 <button onClick={handleLogout} id="deconnexion">
                     <img src="/panel/deconnexion.png" alt="" />

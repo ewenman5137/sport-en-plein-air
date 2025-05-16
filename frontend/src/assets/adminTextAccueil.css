@@ -1,0 +1,105 @@
+#page-admin-text-json {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+}
+
+#editor-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  gap: 20px;
+}
+
+.json-display {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+}
+
+.json-section {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 2px solid #007bff;
+}
+
+.json-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #f0f4ff;
+}
+
+.json-entry span {
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.json-entry span:hover {
+  text-decoration: underline;
+}
+
+.json-entry button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.json-entry button:hover {
+  background-color: #c82333;
+}
+
+.editor-panel {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #d0d7de;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editor-panel textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: monospace;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.editor-panel button {
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.editor-panel button:hover {
+  background-color: #0056b3;
+}
+
+.editor-panel h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}

@@ -49,7 +49,7 @@ function AdminImageAccueil() {
             });
 
             // recharge les images
-            const updated = await fetch("/api/image-accueil");
+            const updated = await fetch("/api/image-accueil/");
             const data = await updated.json();
             setImages(data);
             setFile(null);
@@ -68,7 +68,7 @@ function AdminImageAccueil() {
                     {images.map((img) => (
                         <div className="card-image" key={img.id}>
                             <img
-                                src={`/api${img.image_path}`}
+                                src={`/api${img.image_path}?t=${Date.now()}`}
                                 alt={`Image ${img.id}`}
                                 className="preview-image"
                             />
