@@ -5,7 +5,7 @@ from app.models.models import db
 text_accueil = Blueprint('text_accueil', __name__)
 
 
-@text_accueil.route("/api/text_accueil/", methods=["GET"])
+@text_accueil.route("/", methods=["GET"])
 def get_text_accueil():
     text = TextAccueil.query.first()
     if not text:

@@ -231,7 +231,9 @@ body{
 }
 
 #header-nos-valeurs {
+    margin-top: 10vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid rgba(255,255,255,0.5);
