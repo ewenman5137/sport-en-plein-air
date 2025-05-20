@@ -55,17 +55,27 @@ Elle gère :
 
 
 
-📄 Principales fonctionnalités
+## 📄 Principales fonctionnalités API
 
+| Fonctionnalité                   | Route API                             | Description                                               |
+|----------------------------------|---------------------------------------|-----------------------------------------------------------|
+| **Connexion admin**              | `POST /auth/login`                    | Authentifie l’administrateur avec mot de passe hashé      |
+| **CRUD Activités**               | `GET /activites`                      | Récupération de la liste des activités                    |
+|                                  | `POST /activites`                     | Création d’une nouvelle activité                          |
+|                                  | `PUT /activites/:id`                  | Mise à jour d’une activité existante                      |
+|                                  | `DELETE /activites/:id`               | Suppression d’une activité                                |
+| **CRUD Membres**                 | `GET /membres`                        | Récupération de la liste des membres                      |
+|                                  | `POST /membres`                       | Création d’un nouveau membre                              |
+|                                  | `PUT /membres/:id`                    | Mise à jour d’un membre existant                          |
+|                                  | `DELETE /membres/:id`                 | Suppression d’un membre                                   |
+| **Récupération Images accueil**  | `GET /image-accueil`                  | Récupère les images affichées sur la page d’accueil       |
+|                                  | `PUT /image-accueil`                  | Met à jour les images de la page d’accueil                |
+| **CRUD Partenaires**             | `GET /partenaires`                    | Récupération de la liste des partenaires                  |
+|                                  | `POST /partenaires`                   | Création d’un nouveau partenaire                          |
+|                                  | `PUT /partenaires/:id`                | Mise à jour d’un partenaire existant                      |
+|                                  | `DELETE /partenaires/:id`             | Suppression d’un partenaire                               |
+| **Formulaire de contact**        | `POST /api/send-email`                | Envoi d’un email via le formulaire de contact              |
 
-Fonctionnalité	Route API	Description
-
-Connexion admin	POST /auth/login	Authentifie l'administrateur avec mot de passe hashé
-CRUD Activités	GET/POST/PUT/DELETE /activites	Gérer les activités sportives
-CRUD Membres	GET/POST/PUT/DELETE /membres	Gérer les membres et leurs réseaux sociaux
-Récupération Images accueil	GET/PUT /image-accueil	Gérer les images affichées sur la page d'accueil
-CRUD Partenaires	GET /partenaires	Gérer les partenaires
-Formulaire de contact	POST /api/send-email	Envoi d'email à travers le site
 
 
 🔒 Sécurité
