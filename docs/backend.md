@@ -17,40 +17,42 @@ Elle gère :
 🛠️ Technologies utilisées
 
 
-Technologie	Usage
-Python (Flask)	Développement de l'API
-Flask-Mail	Envoi d'emails de contact
-SQLAlchemy	ORM pour la base de données SQLite
-Flask-CORS	Autorisation des requêtes cross-origin
-Docker	Conteneurisation du backend
-dotenv	Gestion des variables d'environnement
+- Technologie	Usage
+- Python (Flask)	Développement de l'API
+- Flask-Mail	Envoi d'emails de contact
+- SQLAlchemy	ORM pour la base de données SQLite
+- Flask-CORS	Autorisation des requêtes cross-origin
+- Docker	Conteneurisation du backend
+- dotenv	Gestion des variables d'environnement
 
 
-🏗️ Organisation du projet
+## 🏗️ Organisation du projet
 
-/backend
-    /app
-        /models
-            activite.py          # Modèle pour les activités
-            admin.py             # Modèle pour les administrateurs
-            imageAccueil.py      # Modèle pour les images d'accueil
-            membre.py            # Modèle pour les membres et réseaux sociaux
-            partenaire.py        # Modèle pour les partenaires
-            models.py            # Initialisation et importation des modèles
-        /routes
-            route_activite.py    # Routes API pour les activités
-            route_auth.py        # Route pour l'authentification admin
-            route_image_accueil.py # Routes API pour les images d'accueil
-            route_membre.py      # Routes API pour les membres
-            route_partenaire.py  # Routes API pour les partenaires
-            contact.py           # Route API pour le formulaire de contact (email)
-        /services
-            mdp.py               # Service de vérification du mot de passe (bcrypt)
-        __init__.py              # Route de test initiale
-    config.py                    # Paramètres de configuration Flask
-    run.py                       # Point d'entrée principal de l'application
-    Dockerfile                   # Image Docker pour le backend
-    .env                         # Variables d'environnement (non versionnées)
+- **backend/**
+  - **app/**
+    - **models/**
+      - `activite.py`         : Modèle pour les activités  
+      - `admin.py`            : Modèle pour les administrateurs  
+      - `imageAccueil.py`     : Modèle pour les images d’accueil  
+      - `membre.py`           : Modèle pour les membres et réseaux sociaux  
+      - `partenaire.py`       : Modèle pour les partenaires  
+      - `models.py`           : Initialisation et importation des modèles  
+    - **routes/**
+      - `route_activite.py`       : Routes API pour les activités  
+      - `route_auth.py`           : Route pour l’authentification admin  
+      - `route_image_accueil.py`  : Routes API pour les images d’accueil  
+      - `route_membre.py`         : Routes API pour les membres  
+      - `route_partenaire.py`     : Routes API pour les partenaires  
+      - `contact.py`              : Route API pour le formulaire de contact (email)  
+    - **services/**
+      - `mdp.py`                  : Service de vérification du mot de passe (bcrypt)  
+    - `__init__.py`               : Route de test initiale  
+
+  - `config.py`                    : Paramètres de configuration Flask  
+  - `run.py`                       : Point d’entrée principal de l’application  
+  - `Dockerfile`                   : Image Docker pour le backend  
+  - `.env`                         : Variables d’environnement (non versionnées)  
+
 
 
 📄 Principales fonctionnalités
