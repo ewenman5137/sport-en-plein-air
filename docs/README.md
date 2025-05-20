@@ -33,20 +33,23 @@ Elle permet :
 
 🏗️ Architecture du projet
 
-/frontend
-    /src
-        /assets        # Fichiers CSS
-        /component     # Composants réutilisables
-        /pages         # Pages publiques et admin
-    Dockerfile         # Dockerisation du frontend
-
-/backend
-    /app
-        /models        # Modèles SQLAlchemy
-        /routes        # Routes API Flask
-        /services      # Fonctions utilitaires
-    Dockerfile         # Dockerisation du backend
-
-/docker-compose.yml    # Orchestration des services
-/nginx/default.conf    # Configuration Nginx
+/
+├── frontend
+│ ├── src
+│ │ ├── assets/ # Styles, images, etc.
+│ │ ├── components/ # Composants réutilisables
+│ │ └── pages/ # Pages publiques & admin
+│ └── Dockerfile # Construction de l’image frontend
+│
+├── backend
+│ ├── app/
+│ │ ├── models/ # Modèles SQLAlchemy
+│ │ ├── routes/ # Endpoints Flask
+│ │ └── services/ # Logique métier & utilitaires
+│ ├── Dockerfile # Construction de l’image backend
+│ └── run.py # Point d’entrée de l’API
+│
+├── docker-compose.yml # Orchestration des conteneurs
+└── nginx/
+└── default.conf # Configuration du reverse-proxy
 
