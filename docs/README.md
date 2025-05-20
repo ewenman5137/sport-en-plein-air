@@ -23,12 +23,12 @@ Elle permet :
 🛠️ Technologies utilisées
 
 
-Frontend	Backend	Autres
-React + TypeScript	Flask (Python)	Docker
-Vite	Flask-Mail	Nginx
-React Router DOM	Flask-CORS	SQLite
-CSS personnalisé	SQLAlchemy (ORM)	dotenv (variables d'environnement)
-	bcrypt (authentification)	
+| Couche     | Technologies                                                             |
+|------------|---------------------------------------------------------------------------|
+| **Front**  | React • TypeScript • Vite • React Router DOM • CSS personnalisé          |
+| **Back**   | Flask (Python) • Flask-Mail • Flask-CORS • SQLAlchemy • bcrypt • dotenv  |
+| **DB**     | SQLite                                                                    |
+| **Infra**  | Docker • docker-compose • Nginx   
 
 
 🏗️ Architecture du projet
