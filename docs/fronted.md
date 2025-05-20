@@ -12,16 +12,16 @@ Elle propose :
 L'application est optimisée pour la performance avec Vite comme bundler.
 
 
-🛠️ Technologies utilisées
+## 🛠️ Technologies utilisées
 
-Technologie	Usage
-React	Développement de l'interface
-TypeScript	Typage statique du projet
-React Router DOM	Gestion du routage entre pages
-Vite	Build ultra rapide pour React
-Docker	Conteneurisation de l'application
-CSS personnalisé	Styling maison + Google Fonts
-
+| Technologie         | Usage                                          |
+|---------------------|------------------------------------------------|
+| **React**           | Développement de l’interface                   |
+| **TypeScript**      | Typage statique du projet                      |
+| **React Router DOM**| Gestion du routage entre pages                 |
+| **Vite**            | Build ultra-rapide pour React                  |
+| **Docker**          | Conteneurisation de l’application              |
+| **CSS personnalisé**| Styling maison (incl. Google Fonts)            |
 
 
 ## 🏗️ Organisation du projet
@@ -53,18 +53,20 @@ CSS personnalisé	Styling maison + Google Fonts
   - `index.html`                : Template HTML principal utilisé par Vite  
 
 
-📄 Principales fonctionnalités
+## 📄 Principales fonctionnalités
 
-Fonctionnalité	Fichiers concernés	Description
-Accueil du site	Home.tsx	Présentation générale, activités récentes, contact
-Liste des activités	Activites.tsx	Liste complète avec affichage dynamique
-Détail d'une activité	Article.tsx	Page individuelle pour chaque activité
-Présentation de l'équipe	NotreEquipe.tsx	Liste des membres et liens vers leurs réseaux
-Connexion admin	Login.tsx	Authentification sécurisée (token stocké en session)
-Administration des activités	AdminActivites.tsx	Ajout, édition, suppression d'activités
-Administration des membres	AdminEquipe.tsx	Gestion de l'équipe (membres et réseaux sociaux)
-Administration des partenaires	AdminPartenaire.tsx	Gestion des partenaires
-Administration des images d'accueil	AdminImageAccueil.tsx	Mise à jour des images en page d'accueil
+| Fonctionnalité                             | Fichiers concernés           | Description                                            |
+|-------------------------------------------|------------------------------|--------------------------------------------------------|
+| **Accueil du site**                        | `Home.tsx`                   | Présentation générale, activités récentes, contact     |
+| **Liste des activités**                    | `Activites.tsx`              | Liste complète avec affichage dynamique                |
+| **Détail d’une activité**                  | `Article.tsx`                | Page individuelle pour chaque activité                 |
+| **Présentation de l’équipe**               | `NotreEquipe.tsx`            | Liste des membres et liens vers leurs réseaux          |
+| **Connexion admin**                        | `Login.tsx`                  | Authentification sécurisée (token stocké en session)   |
+| **Administration des activités**           | `AdminActivites.tsx`         | Ajout, édition, suppression d’activités               |
+| **Administration des membres**             | `AdminEquipe.tsx`            | Gestion de l’équipe (membres et réseaux sociaux)       |
+| **Administration des partenaires**         | `AdminPartenaire.tsx`        | Gestion des partenaires                                |
+| **Administration des images d’accueil**    | `AdminImageAccueil.tsx`      | Mise à jour des images en page d’accueil               |
+
 
 
 🛡️ Sécurité et gestion des accès
